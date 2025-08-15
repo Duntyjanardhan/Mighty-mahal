@@ -54,6 +54,9 @@ const registerForm = document.getElementById('registerForm');
 const loginBtn = document.getElementById('loginBtn');
 const registerBtn = document.getElementById('registerBtn');
 const checkoutBtn = document.getElementById('checkoutBtn');
+const addressModal = document.getElementById('addressModal');
+const closeAddressModal = document.getElementById('closeAddressModal');
+const validateAddressContinueBtn = document.getElementById('validateAddressContinueBtn');
 const paymentModal = document.getElementById('paymentModal');
 const closePaymentModal = document.getElementById('closePaymentModal');
 const placeOrderBtn = document.getElementById('placeOrderBtn');
@@ -89,6 +92,8 @@ document.addEventListener('DOMContentLoaded', () => {
         closeAuthModalHandler();
         closePaymentModalHandler();
         closeConfirmationModalHandler();
+        // Ensure address modal is also closed if overlay is clicked
+        addressModal.classList.remove('active');
     });
     
     wishlistIcon.addEventListener('click', () => {
@@ -129,10 +134,89 @@ document.addEventListener('DOMContentLoaded', () => {
     registerTab.addEventListener('click', () => switchAuthTab('register'));
     loginBtn.addEventListener('click', loginUser);
     registerBtn.addEventListener('click', registerUser);
-    checkoutBtn.addEventListener('click', checkout);
+    
+    // Modified checkout button listener to use enhancedCheckout
+    checkoutBtn.removeEventListener('click', checkout); // Remove the old listener if it exists
+    checkoutBtn.addEventListener('click', enhancedCheckout); // Add the new enhanced listener
+
     closePaymentModal.addEventListener('click', closePaymentModalHandler);
     placeOrderBtn.addEventListener('click', placeOrder);
     
+    // Close address modal listener
+    closeAddressModal.addEventListener('click', () => {
+        addressModal.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+
+    document.getElementById('sameAsShipping').addEventListener('change', (e) => {
+        document.getElementById('billingSection').style.display = e.target.checked ? 'none' : 'block';
+    });
+
+    // **Crucial Change Here:**
+    // This event listener now handles the transition from address validation to payment.
+    validateAddressContinueBtn.addEventListener('click', () => {
+        const shippingName = document.getElementById('shippingName').value.trim();
+        const shippingPhone = document.getElementById('shippingPhone').value.trim();
+        const shippingAddress1 = document.getElementById('shippingAddress1').value.trim();
+        const shippingCity = document.getElementById('shippingCity').value.trim();
+        const shippingState = document.getElementById('shippingState').value;
+        const shippingZip = document.getElementById('shippingZip').value.trim();
+    
+        if (!shippingName || !shippingPhone || !shippingAddress1 || !shippingCity || !shippingState || !shippingZip) {
+            showToast('Please complete all required shipping details');
+            return;
+        }
+    
+        if (!document.getElementById('sameAsShipping').checked) {
+            const billingName = document.getElementById('billingName').value.trim();
+            const billingPhone = document.getElementById('billingPhone').value.trim();
+            const billingAddress1 = document.getElementById('billingAddress1').value.trim();
+            const billingCity = document.getElementById('billingCity').value.trim();
+            const billingState = document.getElementById('billingState').value;
+            const billingZip = document.getElementById('billingZip').value.trim();
+    
+            if (!billingName || !billingPhone || !billingAddress1 || !billingCity || !billingState || !billingZip) {
+                showToast('Please complete all required billing details');
+                return;
+            }
+        }
+        
+        // Save address information
+        currentUser.shipping = { 
+            shippingName, 
+            shippingPhone, 
+            shippingAddress1, 
+            shippingCity, 
+            shippingState, 
+            shippingZip 
+        };
+            
+        if (!document.getElementById('sameAsShipping').checked) {
+            currentUser.billing = {
+                billingName: document.getElementById('billingName').value.trim(),
+                billingPhone: document.getElementById('billingPhone').value.trim(),
+                billingAddress1: document.getElementById('billingAddress1').value.trim(),
+                billingCity: document.getElementById('billingCity').value.trim(),
+                billingState: document.getElementById('billingState').value,
+                billingZip: document.getElementById('billingZip').value.trim()
+            };
+        } else {
+            currentUser.billing = currentUser.shipping;
+        }
+        saveUserData();
+        
+        // Close address modal and open payment modal after successful validation
+        addressModal.classList.remove('active');
+        // A small timeout can help with smooth transitions, though not strictly necessary
+        setTimeout(() => {
+            paymentModal.classList.add('active');
+            overlay.classList.add('active'); // Ensure overlay is active for payment modal
+            document.body.style.overflow = 'hidden'; // Keep body scroll locked
+        }, 300);
+    });
+    
+
     // Order confirmation modal
     closeConfirmationModal.addEventListener('click', closeConfirmationModalHandler);
     downloadInvoiceBtn.addEventListener('click', downloadInvoiceHandler);
@@ -154,7 +238,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-});
+}); // End of DOMContentLoaded
 
 // Render products with size selection
 function renderProducts(productsToRender) {
@@ -814,23 +898,25 @@ function removeFromWishlist(productId) {
     }
 }
 
+// Original checkout function (now replaced by enhancedCheckout)
 function checkout() {
+    if (!currentUser) {
+        showToast('Please login to proceed with checkout');
+        toggleAuthModal();
+        return;
+    }
     if (cart.length === 0) {
         showToast('Your cart is empty');
         return;
     }
 
-    if (!currentUser) {
-        showToast('Please login to checkout');
-        switchAuthTab('login');
-        authModal.classList.add('active');
-        overlay.classList.add('active');
-        return;
-    }
-
-    paymentModal.classList.add('active');
-    overlay.classList.add('active');
-    document.body.style.overflow = 'hidden';
+  // Close cart sidebar if open
+  cartSidebar.classList.remove('active');
+    
+  // Open address modal
+  addressModal.classList.add('active');
+  overlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
 }
 
 function placeOrder() {
@@ -1707,22 +1793,24 @@ function enhancedCheckout() {
         return;
     }
 
-    // Check if default address is set
-    if (!currentUser.address) {
-        showToast('Please set a delivery address first');
-        openProfileSidebar();
-        showProfileSection('addressValidation');
-        return;
-    }
+    // Check if default address is set (this is a good check, but the address modal handles input)
+    // if (!currentUser.address) {
+    //     showToast('Please set a delivery address first');
+    //     openProfileSidebar();
+    //     showProfileSection('addressValidation');
+    //     return;
+    // }
 
-    paymentModal.classList.add('active');
+    // Only open the address modal here. The address modal's continue button will open payment.
+    addressModal.classList.add('active');
     overlay.classList.add('active');
     document.body.style.overflow = 'hidden';
 }
 
 // Update checkout button event listener
-checkoutBtn.removeEventListener('click', checkout);
-checkoutBtn.addEventListener('click', enhancedCheckout);
+// This line is already present in the DOMContentLoaded, ensuring the correct function is used.
+// checkoutBtn.removeEventListener('click', checkout);
+// checkoutBtn.addEventListener('click', enhancedCheckout);
 
 // Order History with Tracking
 function loadEnhancedOrderHistory() {
