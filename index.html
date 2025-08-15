@@ -21,11 +21,12 @@
             <nav>
                 <ul>
                     <li><a href="#" class="active">Home</a></li>
-                    <li><a href="#">Products</a></li>
-                    <li><a href="#">Categories</a></li>
-                    <li><a href="#">Deals</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
+                    
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#deals">Deals</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
             <div class="search-container">
@@ -145,7 +146,10 @@
     <!-- Cart Sidebar -->
     <div class="cart-sidebar" id="cartSidebar">
         <div class="cart-header">
-            <h2>Your Cart</h2>
+            <div class="cart-header-left">
+                <button class="cart-back-btn" id="cartBackBtn"><i class="fas fa-arrow-left"></i></button>
+                <h2>Your Cart</h2>
+            </div>
             <button class="close-cart" id="closeCart"><i class="fas fa-times"></i></button>
         </div>
         <div class="cart-items" id="cartItems">
@@ -825,7 +829,38 @@
         </div>
     </div>
 </section>
+<!-- Service Pages (hidden by default) -->
+<div id="service-pages">
+    <!-- Contact Us Page -->
+    <div id="contact-page" class="service-page">
+        <!-- Content from file.html -->
+    </div>
 
+    <!-- FAQ Page -->
+    <div id="faq-page" class="service-page">
+        <!-- Content from file.html -->
+    </div>
+
+    <!-- Shipping Policy Page -->
+    <div id="shipping-page" class="service-page">
+        <!-- Content from file.html -->
+    </div>
+
+    <!-- Returns & Exchanges Page -->
+    <div id="returns-page" class="service-page">
+        <!-- Content from file.html -->
+    </div>
+
+    <!-- Privacy Policy Page -->
+    <div id="privacy-page" class="service-page">
+        <!-- Content from file.html -->
+    </div>
+
+    <!-- Terms & Conditions Page -->
+    <div id="terms-page" class="service-page">
+        <!-- Content from file.html -->
+    </div>
+</div>
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -856,12 +891,12 @@
                 <div class="footer-col">
                     <h4>Customer Service</h4>
                     <ul class="footer-links">
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">FAQs</a></li>
-                        <li><a href="#">Shipping Policy</a></li>
-                        <li><a href="#">Returns & Exchanges</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="file.html#contact-page">Contact Us</a></li>
+                        <li><a href="file.html#faq-page">FAQs</a></li>
+                        <li><a href="file.html#shipping-page">Shipping Policy</a></li>
+                        <li><a href="file.html#returns-page">Returns & Exchanges</a></li>
+                        <li><a href="file.html#privacy-page">Privacy Policy</a></li>
+                        <li><a href="file.html#terms-page">Terms & Conditions</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
