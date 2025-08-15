@@ -1,37 +1,40 @@
-// Product Data (40+ products)
+// Product Data (40+ products with sizes added)
 const products = [
-    { id: 1, name: "Men's Casual Shirt", price: 1599, category: "fashion", rating: 4.5, reviews: 128, image: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80", badge: "New" },
-    { id: 2, name: "Women's Summer Dress", price: 2499, category: "fashion", rating: 4.7, reviews: 96, image: "https://images.unsplash.com/photo-1529903384028-929ae4dcc8b3?q=80", badge: "Sale" },
-    { id: 3, name: "Designer Jeans", price: 2299, category: "fashion", rating: 4.3, reviews: 245, image: "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80" },
-    { id: 4, name: "Leather Jacket", price: 5999, category: "fashion", rating: 4.8, reviews: 87, image: "https://images.unsplash.com/photo-1551028719-00167b16eac5?q=80", badge: "Premium" },
+    { id: 1, name: "Men's Casual Shirt", price: 1599, category: "fashion", rating: 4.5, reviews: 128, image: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80", badge: "New", sizes: ['S', 'M', 'L', 'XL'] },
+    { id: 2, name: "Women's Summer Dress", price: 2499, category: "fashion", rating: 4.7, reviews: 96, image: "https://images.unsplash.com/photo-1529903384028-929ae4dcc8b3?q=80", badge: "Sale", sizes: ['S', 'M', 'L'] },
+    { id: 3, name: "Designer Jeans", price: 2299, category: "fashion", rating: 4.3, reviews: 245, image: "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80", sizes: ['28', '30', '32', '34'] },
+    { id: 4, name: "Leather Jacket", price: 5999, category: "fashion", rating: 4.8, reviews: 87, image: "https://images.unsplash.com/photo-1551028719-00167b16eac5?q=80", badge: "Premium", sizes: ['S', 'M', 'L', 'XL'] },
     { id: 5, name: "Women's Handbag", price: 3499, category: "fashion", rating: 4.6, reviews: 142, image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80" },
-    { id: 6, name: "Men's Formal Suit", price: 8499, oldPrice: 10999, category: "fashion", rating: 4.9, reviews: 78, image: "https://images.unsplash.com/photo-1598808503746-f34cfb6c2524?q=80", badge: "-20%" },
-    { id: 7, name: "Women's High Heels", price: 2799, category: "fashion", rating: 4.2, reviews: 201, image: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?q=80" },
-    { id: 8, name: "Unisex Sneakers", price: 3299, category: "fashion", rating: 4.5, reviews: 112, image: "https://images.unsplash.com/photo-1600269452121-4f2416e55c28?q=80" },
+    { id: 6, name: "Men's Formal Suit", price: 8499, oldPrice: 10999, category: "fashion", rating: 4.9, reviews: 78, image: "https://images.unsplash.com/photo-1598808503746-f34cfb6c2524?q=80", badge: "-20%", sizes: ['38', '40', '42', '44'] },
+    { id: 7, name: "Women's High Heels", price: 2799, category: "fashion", rating: 4.2, reviews: 201, image: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?q=80", sizes: ['6', '7', '8', '9'] },
+    { id: 8, name: "Unisex Sneakers", price: 3299, category: "fashion", rating: 4.5, reviews: 112, image: "https://images.unsplash.com/photo-1600269452121-4f2416e55c28?q=80", sizes: ['6', '7', '8', '9', '10'] },
     { id: 9, name: "Designer Sunglasses", price: 1999, oldPrice: 2599, category: "fashion", rating: 4.4, reviews: 189, image: "https://images.unsplash.com/photo-1577803645773-f96470509666?q=80", badge: "Sale" },
-    { id: 10, name: "Women's Winter Coat", price: 4999, category: "fashion", rating: 4.7, reviews: 94, image: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80" },
-    { id: 11, name: "Men's Sportswear Set", price: 2999, category: "fashion", rating: 4.3, reviews: 67, image: "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80" },
+    { id: 10, name: "Women's Winter Coat", price: 4999, category: "fashion", rating: 4.7, reviews: 94, image: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80", sizes: ['S', 'M', 'L'] },
+    { id: 11, name: "Men's Sportswear Set", price: 2999, category: "fashion", rating: 4.3, reviews: 67, image: "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80", sizes: ['S', 'M', 'L', 'XL'] },
     { id: 12, name: "Designer Watch", price: 8999, category: "fashion", rating: 4.9, reviews: 123, image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80", badge: "Luxury" },
     { id: 13, name: "Women's Jewelry Set", price: 4599, category: "fashion", rating: 4.8, reviews: 56, image: "https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?q=80" },
-    { id: 14, name: "Men's Casual Shoes", price: 2499, oldPrice: 3299, category: "fashion", rating: 4.1, reviews: 88, image: "https://images.unsplash.com/photo-1605812860427-4024433a70fd?q=80", badge: "-25%" },
-    { id: 15, name: "Kids T-Shirt Pack", price: 1499, category: "fashion", rating: 4.6, reviews: 45, image: "https://images.unsplash.com/photo-1609505848916-c9f6f4bd0b57?q=80" },
+    { id: 14, name: "Men's Casual Shoes", price: 2499, oldPrice: 3299, category: "fashion", rating: 4.1, reviews: 88, image: "https://images.unsplash.com/photo-1605812860427-4024433a70fd?q=80", badge: "-25%", sizes: ['8', '9', '10', '11'] },
+    { id: 15, name: "Kids T-Shirt Pack", price: 1499, category: "fashion", rating: 4.6, reviews: 45, image: "https://images.unsplash.com/photo-1609505848916-c9f6f4bd0b57?q=80", sizes: ['3-4', '5-6', '7-8'] },
     { id: 16, name: "Designer Handbag", price: 6999, category: "fashion", rating: 4.9, reviews: 167, image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80" },
-    { id: 17, name: "Women's Leggings", price: 1299, category: "fashion", rating: 4.4, reviews: 102, image: "https://images.unsplash.com/photo-1609505848916-c9f6f4bd0b57?q=80" },
+    { id: 17, name: "Women's Leggings", price: 1299, category: "fashion", rating: 4.4, reviews: 102, image: "https://images.unsplash.com/photo-1609505848916-c9f6f4bd0b57?q=80", sizes: ['S', 'M', 'L'] },
     { id: 18, name: "Men's Wallet", price: 1799, category: "fashion", rating: 4.3, reviews: 73, image: "https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?q=80" },
     { id: 19, name: "Women's Scarf Set", price: 999, oldPrice: 1499, category: "fashion", rating: 4.5, reviews: 134, image: "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80", badge: "-33%" },
-    { id: 20, name: "Designer Belt", price: 1999, category: "fashion", rating: 4.2, reviews: 89, image: "https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?q=80" }
+    { id: 20, name: "Designer Belt", price: 1999, category: "fashion", rating: 4.2, reviews: 89, image: "https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?q=80", sizes: ['30', '32', '34', '36'] }
 ];
+
 // Shopping cart
 let cart = [];
 let wishlist = [];
 let currentUser = null;
 let orders = [];
+let currentOrder = null;
 
 // DOM elements
 const productGrid = document.getElementById('productGrid');
 const cartIcon = document.getElementById('cartIcon');
 const cartSidebar = document.getElementById('cartSidebar');
 const closeCart = document.getElementById('closeCart');
+const cartBackBtn = document.getElementById('cartBackBtn');
 const overlay = document.getElementById('overlay');
 const cartItems = document.getElementById('cartItems');
 const cartTotal = document.getElementById('cartTotal');
@@ -54,10 +57,11 @@ const checkoutBtn = document.getElementById('checkoutBtn');
 const paymentModal = document.getElementById('paymentModal');
 const closePaymentModal = document.getElementById('closePaymentModal');
 const placeOrderBtn = document.getElementById('placeOrderBtn');
-const profileSection = document.getElementById('profileSection');
-const orderList = document.getElementById('orderList');
-const userName = document.getElementById('userName');
-const userEmail = document.getElementById('userEmail');
+const confirmationModal = document.getElementById('confirmationModal');
+const closeConfirmationModal = document.getElementById('closeConfirmationModal');
+const downloadInvoiceBtn = document.getElementById('downloadInvoiceBtn');
+const continueShoppingBtn = document.getElementById('continueShoppingBtn');
+const orderIdPlaceholder = document.getElementById('orderIdPlaceholder');
 
 // Profile Sidebar Elements
 const profileSidebar = document.getElementById('profileSidebar');
@@ -66,54 +70,35 @@ const profileSidebarItems = document.querySelectorAll('.profile-sidebar-item');
 const sidebarUserName = document.getElementById('sidebarUserName');
 const sidebarUserEmail = document.getElementById('sidebarUserEmail');
 
-// Profile Content Sections
-const dashboardSection = document.getElementById('dashboardSection');
-const passwordResetSection = document.getElementById('passwordResetSection');
-const siteAnalyticsSection = document.getElementById('siteAnalyticsSection');
-const addressValidationSection = document.getElementById('addressValidationSection');
-
-// Settings Elements
-const settingsTabs = document.querySelectorAll('.settings-tab');
-const settingsTabContents = document.querySelectorAll('.settings-tab-content');
-
-// Old profile elements (keeping for compatibility)
-const profileNavItems = document.querySelectorAll('.profile-nav-item');
-const orderHistorySection = document.getElementById('orderHistorySection');
-const userProfileSection = document.getElementById('userProfileSection');
-const wishlistSection = document.getElementById('wishlistSection');
-const addressBookSection = document.getElementById('addressBookSection');
-const accountSettingsSection = document.getElementById('accountSettingsSection');
-const profileName = document.getElementById('profileName');
-const profileEmail = document.getElementById('profileEmail');
-const profileAddress = document.getElementById('profileAddress');
-const profilePhone = document.getElementById('profilePhone');
-const profileDOB = document.getElementById('profileDOB');
-const saveProfileBtn = document.getElementById('saveProfileBtn');
-const wishlistItems = document.getElementById('wishlistItems');
-const addressList = document.getElementById('addressList');
-const addAddressBtn = document.getElementById('addAddressBtn');
-const changePasswordBtn = document.getElementById('changePasswordBtn');
-const saveNotificationBtn = document.getElementById('saveNotificationBtn');
-const downloadDataBtn = document.getElementById('downloadDataBtn');
-const deleteAccountBtn = document.getElementById('deleteAccountBtn');
-
 // Initialize the page
 document.addEventListener('DOMContentLoaded', () => {
     loadUserData();
     renderProducts(products);
     updateCartCount();
     updateWishlistCount();
-    updateProfileUI();
 
     // Event listeners
     cartIcon.addEventListener('click', openCart);
     closeCart.addEventListener('click', closeCartHandler);
+    if (cartBackBtn) {
+        cartBackBtn.addEventListener('click', closeCartHandler);
+    }
     overlay.addEventListener('click', () => {
         closeCartHandler();
         closeProfileSidebarHandler();
+        closeAuthModalHandler();
+        closePaymentModalHandler();
+        closeConfirmationModalHandler();
     });
+    
     wishlistIcon.addEventListener('click', () => {
-        showToast('Wishlist feature coming soon!');
+        if (currentUser) {
+            openProfileSidebar();
+            showProfileSection('wishlist');
+        } else {
+            showToast('Please login to view your wishlist');
+            toggleAuthModal();
+        }
     });
 
     // Filter buttons
@@ -131,7 +116,14 @@ document.addEventListener('DOMContentLoaded', () => {
     searchInput.addEventListener('input', handleSearch);
 
     // Auth functionality
-    profileIcon.addEventListener('click', toggleAuthModal);
+    profileIcon.addEventListener('click', () => {
+        if (currentUser) {
+            openProfileSidebar();
+        } else {
+            toggleAuthModal();
+        }
+    });
+    
     closeAuthModal.addEventListener('click', closeAuthModalHandler);
     loginTab.addEventListener('click', () => switchAuthTab('login'));
     registerTab.addEventListener('click', () => switchAuthTab('register'));
@@ -140,66 +132,12 @@ document.addEventListener('DOMContentLoaded', () => {
     checkoutBtn.addEventListener('click', checkout);
     closePaymentModal.addEventListener('click', closePaymentModalHandler);
     placeOrderBtn.addEventListener('click', placeOrder);
-
-    // Profile functionality
-    profileNavItems.forEach(item => {
-        item.addEventListener('click', () => {
-            const section = item.dataset.section;
-            profileNavItems.forEach(i => i.classList.remove('active'));
-            item.classList.add('active');
-
-            // Hide all sections
-            const allSections = [orderHistorySection, userProfileSection, wishlistSection, addressBookSection, accountSettingsSection];
-            allSections.forEach(sec => {
-                if (sec) {
-                    sec.style.display = 'none';
-                    sec.classList.remove('active');
-                }
-            });
-
-            // Show selected section
-            switch(section) {
-                case 'orderHistory':
-                    orderHistorySection.style.display = 'block';
-                    orderHistorySection.classList.add('active');
-                    loadOrderHistory();
-                    break;
-                case 'userProfile':
-                    userProfileSection.style.display = 'block';
-                    userProfileSection.classList.add('active');
-                    loadProfileData();
-                    break;
-                case 'wishlist':
-                    wishlistSection.style.display = 'block';
-                    wishlistSection.classList.add('active');
-                    loadWishlistData();
-                    break;
-                case 'addressBook':
-                    addressBookSection.style.display = 'block';
-                    addressBookSection.classList.add('active');
-                    loadAddressBook();
-                    break;
-                case 'accountSettings':
-                    accountSettingsSection.style.display = 'block';
-                    accountSettingsSection.classList.add('active');
-                    loadAccountSettings();
-                    break;
-            }
-        });
-    });
-
-    saveProfileBtn.addEventListener('click', saveProfile);
     
-    // Additional profile functionality
-    if (addAddressBtn) addAddressBtn.addEventListener('click', addNewAddress);
-    if (changePasswordBtn) changePasswordBtn.addEventListener('click', changePassword);
-    if (saveNotificationBtn) saveNotificationBtn.addEventListener('click', saveNotificationSettings);
-    if (downloadDataBtn) downloadDataBtn.addEventListener('click', downloadUserData);
-    if (deleteAccountBtn) deleteAccountBtn.addEventListener('click', deleteAccount);
+    // Order confirmation modal
+    closeConfirmationModal.addEventListener('click', closeConfirmationModalHandler);
+    downloadInvoiceBtn.addEventListener('click', downloadInvoiceHandler);
+    continueShoppingBtn.addEventListener('click', continueShoppingHandler);
 
-    // Profile Sidebar functionality
-    if (closeProfileSidebar) closeProfileSidebar.addEventListener('click', closeProfileSidebarHandler);
-    
     // Profile sidebar navigation
     profileSidebarItems.forEach(item => {
         item.addEventListener('click', () => {
@@ -216,25 +154,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-
-    // Settings tabs functionality
-    settingsTabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            const tabName = tab.dataset.tab;
-            settingsTabs.forEach(t => t.classList.remove('active'));
-            tab.classList.add('active');
-            
-            settingsTabContents.forEach(content => {
-                content.classList.remove('active');
-                if (content.id === tabName + 'Tab') {
-                    content.classList.add('active');
-                }
-            });
-        });
-    });
 });
 
-// Render products
+// Render products with size selection
 function renderProducts(productsToRender) {
     productGrid.innerHTML = '';
 
@@ -255,6 +177,13 @@ function renderProducts(productsToRender) {
                     ₹${product.price.toLocaleString()}
                     ${product.oldPrice ? `<span class="old-price">₹${product.oldPrice.toLocaleString()}</span>` : ''}
                 </div>
+                ${product.sizes ? `
+                <div class="product-sizes">
+                    <select class="size-select" data-id="${product.id}">
+                        ${product.sizes.map(size => `<option value="${size}">${size}</option>`).join('')}
+                    </select>
+                </div>
+                ` : ''}
                 <div class="product-rating">
                     ${renderRating(product.rating)} (${product.reviews})
                 </div>
@@ -269,9 +198,6 @@ function renderProducts(productsToRender) {
 
         productGrid.appendChild(productCard);
     });
-
-        productGrid.appendChild(productCard);
-    };
 
     // Add event listeners to buttons
     document.querySelectorAll('.add-to-cart').forEach(btn => {
@@ -289,7 +215,7 @@ function renderProducts(productsToRender) {
             showProductDetails(product);
         });
     });
-
+}
 
 // Render rating stars
 function renderRating(rating) {
@@ -313,13 +239,15 @@ function renderRating(rating) {
     return stars;
 }
 
-// Add to cart
+// Add to cart with size selection
 function addToCart(e) {
     const productId = parseInt(e.target.dataset.id);
     const product = products.find(p => p.id === productId);
+    const sizeSelect = e.target.closest('.product-card').querySelector('.size-select');
+    const size = sizeSelect ? sizeSelect.value : null;
 
-    // Check if product is already in cart
-    const existingItem = cart.find(item => item.id === productId);
+    // Check if product is already in cart with same size
+    const existingItem = cart.find(item => item.id === productId && (!size || item.size === size));
 
     if (existingItem) {
         existingItem.quantity++;
@@ -329,7 +257,8 @@ function addToCart(e) {
             name: product.name,
             price: product.price,
             quantity: 1,
-            icon: product.icon
+            image: product.image,
+            size: size
         });
     }
 
@@ -344,6 +273,12 @@ function addToCart(e) {
 
 // Toggle wishlist
 function toggleWishlist(e) {
+    if (!currentUser) {
+        showToast('Please login to add items to wishlist');
+        toggleAuthModal();
+        return;
+    }
+
     const productId = parseInt(e.target.closest('.wishlist').dataset.id);
     const index = wishlist.indexOf(productId);
 
@@ -366,11 +301,13 @@ function toggleWishlist(e) {
 function updateCartCount() {
     const count = cart.reduce((total, item) => total + item.quantity, 0);
     cartCount.textContent = count;
+    localStorage.setItem('mm_cart', JSON.stringify(cart));
 }
 
 // Update wishlist count
 function updateWishlistCount() {
     wishlistCount.textContent = wishlist.length;
+    localStorage.setItem('mm_wishlist', JSON.stringify(wishlist));
 }
 
 // Open cart
@@ -388,7 +325,7 @@ function closeCartHandler() {
     document.body.style.overflow = '';
 }
 
-// Render cart items
+// Render cart items with size information
 function renderCartItems() {
     if (cart.length === 0) {
         cartItems.innerHTML = '<p style="text-align: center; padding: 20px;">Your cart is empty</p>';
@@ -406,20 +343,25 @@ function renderCartItems() {
         const cartItem = document.createElement('div');
         cartItem.className = 'cart-item';
         cartItem.innerHTML = `
-                    <div class="cart-item-img">
-                        <i class="${item.icon}"></i>
+            <div class="cart-item-img">
+                <img src="${item.image}" alt="${item.name}">
+            </div>
+            <div class="cart-item-details">
+                <div class="cart-item-title">${item.name}</div>
+                ${item.size ? `<div class="cart-item-size">Size: ${item.size}</div>` : ''}
+                <div class="cart-item-price">₹${item.price.toLocaleString()}</div>
+                <div class="cart-item-actions">
+                    <div class="cart-item-quantity">
+                        <button class="quantity-btn minus" data-id="${item.id}" data-size="${item.size || ''}">-</button>
+                        <input type="number" class="quantity-input" value="${item.quantity}" min="1" data-id="${item.id}" data-size="${item.size || ''}">
+                        <button class="quantity-btn plus" data-id="${item.id}" data-size="${item.size || ''}">+</button>
                     </div>
-                    <div class="cart-item-details">
-                        <div class="cart-item-title">${item.name}</div>
-                        <div class="cart-item-price">₹${item.price.toLocaleString()}</div>
-                        <div class="cart-item-quantity">
-                            <button class="quantity-btn minus" data-id="${item.id}">-</button>
-                            <input type="number" class="quantity-input" value="${item.quantity}" min="1" data-id="${item.id}">
-                            <button class="quantity-btn plus" data-id="${item.id}">+</button>
-                            <button class="remove-item" data-id="${item.id}"><i class="fas fa-trash"></i></button>
-                        </div>
-                    </div>
-                `;
+                    <button class="remove-item" data-id="${item.id}" data-size="${item.size || ''}" title="Remove item">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+        `;
 
         cartItems.appendChild(cartItem);
     });
@@ -447,12 +389,14 @@ function renderCartItems() {
 // Decrease quantity
 function decreaseQuantity(e) {
     const productId = parseInt(e.target.dataset.id);
-    const item = cart.find(item => item.id === productId);
+    const size = e.target.dataset.size;
+    const item = cart.find(item => item.id === productId && (!size || item.size === size));
 
     if (item.quantity > 1) {
         item.quantity--;
     } else {
-        cart = cart.filter(item => item.id !== productId);
+        cart = cart.filter(item => !(item.id === productId && (!size || item.size === size)));
+        showToast('Item removed from cart');
     }
 
     updateCartCount();
@@ -462,7 +406,8 @@ function decreaseQuantity(e) {
 // Increase quantity
 function increaseQuantity(e) {
     const productId = parseInt(e.target.dataset.id);
-    const item = cart.find(item => item.id === productId);
+    const size = e.target.dataset.size;
+    const item = cart.find(item => item.id === productId && (!size || item.size === size));
     item.quantity++;
     updateCartCount();
     renderCartItems();
@@ -471,7 +416,8 @@ function increaseQuantity(e) {
 // Update quantity
 function updateQuantity(e) {
     const productId = parseInt(e.target.dataset.id);
-    const item = cart.find(item => item.id === productId);
+    const size = e.target.dataset.size;
+    const item = cart.find(item => item.id === productId && (!size || item.size === size));
     const newQuantity = parseInt(e.target.value) || 1;
 
     if (newQuantity < 1) {
@@ -488,7 +434,8 @@ function updateQuantity(e) {
 // Remove item
 function removeItem(e) {
     const productId = parseInt(e.target.closest('.remove-item').dataset.id);
-    cart = cart.filter(item => item.id !== productId);
+    const size = e.target.closest('.remove-item').dataset.size;
+    cart = cart.filter(item => !(item.id === productId && (!size || item.size === size)));
     updateCartCount();
     renderCartItems();
     showToast('Item removed from cart');
@@ -541,13 +488,9 @@ function showToast(message) {
 
 // User Authentication Functions
 function toggleAuthModal() {
-    if (currentUser) {
-        openProfileSidebar();
-    } else {
-        authModal.classList.add('active');
-        overlay.classList.add('active');
-        document.body.style.overflow = 'hidden';
-    }
+    authModal.classList.add('active');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
 }
 
 function closeAuthModalHandler() {
@@ -558,6 +501,12 @@ function closeAuthModalHandler() {
 
 function closePaymentModalHandler() {
     paymentModal.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+function closeConfirmationModalHandler() {
+    confirmationModal.classList.remove('active');
     overlay.classList.remove('active');
     document.body.style.overflow = '';
 }
@@ -573,6 +522,8 @@ function loadUserData() {
     const storedUsers = localStorage.getItem('mm_users');
     const storedCurrentUser = localStorage.getItem('mm_currentUser');
     const storedOrders = localStorage.getItem('mm_orders');
+    const storedCart = localStorage.getItem('mm_cart');
+    const storedWishlist = localStorage.getItem('mm_wishlist');
 
     if (storedUsers) {
         users = JSON.parse(storedUsers);
@@ -580,16 +531,29 @@ function loadUserData() {
 
     if (storedCurrentUser) {
         currentUser = JSON.parse(storedCurrentUser);
+        updateSidebarUserInfo();
     }
 
     if (storedOrders) {
         orders = JSON.parse(storedOrders);
+    }
+
+    if (storedCart) {
+        cart = JSON.parse(storedCart);
+        updateCartCount();
+    }
+
+    if (storedWishlist) {
+        wishlist = JSON.parse(storedWishlist);
+        updateWishlistCount();
     }
 }
 
 function saveUserData() {
     localStorage.setItem('mm_currentUser', JSON.stringify(currentUser));
     localStorage.setItem('mm_orders', JSON.stringify(orders));
+    localStorage.setItem('mm_cart', JSON.stringify(cart));
+    localStorage.setItem('mm_wishlist', JSON.stringify(wishlist));
 }
 
 function registerUser() {
@@ -631,10 +595,10 @@ function registerUser() {
     // Auto-login the new user
     currentUser = newUser;
     saveUserData();
+    updateSidebarUserInfo();
 
     showToast('Registration successful!');
     closeAuthModalHandler();
-    updateProfileUI();
 }
 
 function loginUser() {
@@ -653,9 +617,9 @@ function loginUser() {
     if (user) {
         currentUser = user;
         saveUserData();
+        updateSidebarUserInfo();
         showToast(`Welcome back, ${user.name.split(' ')[0]}!`);
         closeAuthModalHandler();
-        updateProfileUI();
     } else {
         showToast('Invalid email or password');
     }
@@ -665,426 +629,10 @@ function logoutUser() {
     currentUser = null;
     saveUserData();
     showToast('Logged out successfully');
-    updateProfileUI();
-    profileSection.classList.remove('active');
+    closeProfileSidebarHandler();
 }
 
-function updateProfileUI() {
-    if (currentUser) {
-        userName.textContent = `Welcome, ${currentUser.name}`;
-        userEmail.textContent = currentUser.email;
-        profileSection.classList.add('active');
-        loadOrderHistory();
-    } else {
-        profileSection.classList.remove('active');
-    }
-}
-
-function loadProfileData() {
-    if (currentUser) {
-        profileName.value = currentUser.name;
-        profileEmail.value = currentUser.email;
-        profileAddress.value = currentUser.address;
-        profilePhone.value = currentUser.phone;
-        if (profileDOB) profileDOB.value = currentUser.dob || '';
-    }
-}
-
-function saveProfile() {
-    if (!currentUser) return;
-
-    currentUser.name = profileName.value;
-    currentUser.address = profileAddress.value;
-    currentUser.phone = profilePhone.value;
-    if (profileDOB) currentUser.dob = profileDOB.value;
-
-    // Update in users array
-    const storedUsers = localStorage.getItem('mm_users');
-    if (storedUsers) {
-        const users = JSON.parse(storedUsers);
-        const userIndex = users.findIndex(u => u.id === currentUser.id);
-        if (userIndex !== -1) {
-            users[userIndex] = currentUser;
-            localStorage.setItem('mm_users', JSON.stringify(users));
-            saveUserData();
-            updateProfileUI();
-            showToast('Profile updated successfully');
-        }
-    }
-}
-
-// New Profile Tab Functions
-function loadOrderHistory() {
-    if (!currentUser || !orderList) return;
-    
-    const orders = JSON.parse(localStorage.getItem('mm_orders') || '[]');
-    const userOrders = orders.filter(order => order.userId === currentUser.id);
-    
-    if (userOrders.length === 0) {
-        orderList.innerHTML = '<div class="empty-state"><p>No orders found</p></div>';
-        return;
-    }
-    
-    orderList.innerHTML = userOrders.map(order => `
-        <div class="order-item">
-            <div class="order-header">
-                <h4>Order #${order.id}</h4>
-                <span class="order-status ${order.status}">${order.status}</span>
-            </div>
-            <div class="order-details">
-                <p><strong>Date:</strong> ${new Date(order.date).toLocaleDateString()}</p>
-                <p><strong>Total:</strong> ₹${order.total.toFixed(2)}</p>
-                <p><strong>Items:</strong> ${order.items.length} item(s)</p>
-            </div>
-            <div class="order-items">
-                ${order.items.map(item => `
-                    <div class="order-product">
-                        <span>${item.name} x ${item.quantity}</span>
-                        <span>₹${(item.price * item.quantity).toFixed(2)}</span>
-                    </div>
-                `).join('')}
-            </div>
-        </div>
-    `).join('');
-}
-
-function loadWishlistData() {
-    if (!wishlistItems) return;
-    
-    if (wishlist.length === 0) {
-        wishlistItems.innerHTML = '<div class="empty-state"><p>Your wishlist is empty</p></div>';
-        return;
-    }
-    
-    const wishlistProducts = products.filter(product => wishlist.includes(product.id));
-    
-    wishlistItems.innerHTML = wishlistProducts.map(product => `
-        <div class="wishlist-item">
-            <img src="${product.image}" alt="${product.name}">
-            <h4>${product.name}</h4>
-            <div class="price">₹${product.price.toFixed(2)}</div>
-            <div class="wishlist-actions">
-                <button class="btn btn-sm" onclick="addToCart(${product.id})">Add to Cart</button>
-                <button class="btn btn-outline btn-sm" onclick="removeFromWishlist(${product.id})">Remove</button>
-            </div>
-        </div>
-    `).join('');
-}
-
-function loadAddressBook() {
-    if (!addressList) return;
-    
-    const addresses = JSON.parse(localStorage.getItem('mm_addresses') || '[]');
-    const userAddresses = addresses.filter(addr => addr.userId === currentUser?.id);
-    
-    if (userAddresses.length === 0) {
-        addressList.innerHTML = '<div class="empty-state"><p>No addresses saved</p></div>';
-        return;
-    }
-    
-    addressList.innerHTML = userAddresses.map(address => `
-        <div class="address-item ${address.isDefault ? 'default' : ''}">
-            <div class="address-actions-btn">
-                <button onclick="editAddress(${address.id})" title="Edit">
-                    <i class="fas fa-edit"></i>
-                </button>
-                <button onclick="deleteAddress(${address.id})" title="Delete">
-                    <i class="fas fa-trash"></i>
-                </button>
-            </div>
-            <h4>${address.type} Address ${address.isDefault ? '(Default)' : ''}</h4>
-            <p>${address.name}</p>
-            <p>${address.address}</p>
-            <p>${address.city}, ${address.state} - ${address.pincode}</p>
-            <p>Phone: ${address.phone}</p>
-        </div>
-    `).join('');
-}
-
-function loadAccountSettings() {
-    if (!currentUser) return;
-    
-    // Load notification preferences
-    const notifications = JSON.parse(localStorage.getItem('mm_notifications') || '{}');
-    const userNotifications = notifications[currentUser.id] || {
-        email: true,
-        sms: false,
-        promotional: true
-    };
-    
-    const emailNotifications = document.getElementById('emailNotifications');
-    const smsNotifications = document.getElementById('smsNotifications');
-    const promotionalEmails = document.getElementById('promotionalEmails');
-    
-    if (emailNotifications) emailNotifications.checked = userNotifications.email;
-    if (smsNotifications) smsNotifications.checked = userNotifications.sms;
-    if (promotionalEmails) promotionalEmails.checked = userNotifications.promotional;
-}
-
-function addNewAddress() {
-    // Create a simple modal for adding address
-    const addressModal = document.createElement('div');
-    addressModal.className = 'address-modal';
-    addressModal.innerHTML = `
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3>Add New Address</h3>
-                <button class="close-modal" onclick="closeAddressModal()">×</button>
-            </div>
-            <div class="modal-body">
-                <div class="form-group">
-                    <label>Address Type</label>
-                    <select id="addressType" class="form-control">
-                        <option value="Home">Home</option>
-                        <option value="Work">Work</option>
-                        <option value="Other">Other</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>Full Name</label>
-                    <input type="text" id="addressName" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label>Address</label>
-                    <textarea id="addressText" class="form-control" rows="3" required></textarea>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label>City</label>
-                        <input type="text" id="addressCity" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label>State</label>
-                        <input type="text" id="addressState" class="form-control" required>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label>Pincode</label>
-                        <input type="text" id="addressPincode" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Phone</label>
-                        <input type="tel" id="addressPhone" class="form-control" required>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="checkbox-label">
-                        <input type="checkbox" id="setAsDefault">
-                        Set as default address
-                    </label>
-                </div>
-                <div class="modal-actions">
-                    <button class="btn" onclick="saveNewAddress()">Save Address</button>
-                    <button class="btn btn-outline" onclick="closeAddressModal()">Cancel</button>
-                </div>
-            </div>
-        </div>
-    `;
-    
-    document.body.appendChild(addressModal);
-    addressModal.style.display = 'flex';
-}
-
-function saveNewAddress() {
-    const addressType = document.getElementById('addressType').value;
-    const addressName = document.getElementById('addressName').value;
-    const addressText = document.getElementById('addressText').value;
-    const addressCity = document.getElementById('addressCity').value;
-    const addressState = document.getElementById('addressState').value;
-    const addressPincode = document.getElementById('addressPincode').value;
-    const addressPhone = document.getElementById('addressPhone').value;
-    const setAsDefault = document.getElementById('setAsDefault').checked;
-    
-    if (!addressName || !addressText || !addressCity || !addressState || !addressPincode || !addressPhone) {
-        showToast('Please fill all fields');
-        return;
-    }
-    
-    const addresses = JSON.parse(localStorage.getItem('mm_addresses') || '[]');
-    const newAddress = {
-        id: Date.now(),
-        userId: currentUser.id,
-        type: addressType,
-        name: addressName,
-        address: addressText,
-        city: addressCity,
-        state: addressState,
-        pincode: addressPincode,
-        phone: addressPhone,
-        isDefault: setAsDefault
-    };
-    
-    // If setting as default, remove default from other addresses
-    if (setAsDefault) {
-        addresses.forEach(addr => {
-            if (addr.userId === currentUser.id) {
-                addr.isDefault = false;
-            }
-        });
-    }
-    
-    addresses.push(newAddress);
-    localStorage.setItem('mm_addresses', JSON.stringify(addresses));
-    
-    closeAddressModal();
-    loadAddressBook();
-    showToast('Address added successfully');
-}
-
-function closeAddressModal() {
-    const modal = document.querySelector('.address-modal');
-    if (modal) {
-        modal.remove();
-    }
-}
-
-function editAddress(addressId) {
-    showToast('Edit address feature coming soon!');
-}
-
-function deleteAddress(addressId) {
-    if (confirm('Are you sure you want to delete this address?')) {
-        const addresses = JSON.parse(localStorage.getItem('mm_addresses') || '[]');
-        const updatedAddresses = addresses.filter(addr => addr.id !== addressId);
-        localStorage.setItem('mm_addresses', JSON.stringify(updatedAddresses));
-        loadAddressBook();
-        showToast('Address deleted successfully');
-    }
-}
-
-function changePassword() {
-    const currentPassword = document.getElementById('currentPassword').value;
-    const newPassword = document.getElementById('newPassword').value;
-    const confirmPassword = document.getElementById('confirmPassword').value;
-    
-    if (!currentPassword || !newPassword || !confirmPassword) {
-        showToast('Please fill all password fields');
-        return;
-    }
-    
-    if (newPassword !== confirmPassword) {
-        showToast('New passwords do not match');
-        return;
-    }
-    
-    if (newPassword.length < 6) {
-        showToast('Password must be at least 6 characters long');
-        return;
-    }
-    
-    // In a real app, you would verify the current password
-    // For demo purposes, we'll just update it
-    if (currentUser) {
-        currentUser.password = newPassword;
-        const users = JSON.parse(localStorage.getItem('mm_users') || '[]');
-        const userIndex = users.findIndex(u => u.id === currentUser.id);
-        if (userIndex !== -1) {
-            users[userIndex] = currentUser;
-            localStorage.setItem('mm_users', JSON.stringify(users));
-            
-            // Clear password fields
-            document.getElementById('currentPassword').value = '';
-            document.getElementById('newPassword').value = '';
-            document.getElementById('confirmPassword').value = '';
-            
-            showToast('Password changed successfully');
-        }
-    }
-}
-
-function saveNotificationSettings() {
-    if (!currentUser) return;
-    
-    const emailNotifications = document.getElementById('emailNotifications').checked;
-    const smsNotifications = document.getElementById('smsNotifications').checked;
-    const promotionalEmails = document.getElementById('promotionalEmails').checked;
-    
-    const notifications = JSON.parse(localStorage.getItem('mm_notifications') || '{}');
-    notifications[currentUser.id] = {
-        email: emailNotifications,
-        sms: smsNotifications,
-        promotional: promotionalEmails
-    };
-    
-    localStorage.setItem('mm_notifications', JSON.stringify(notifications));
-    showToast('Notification preferences saved');
-}
-
-function downloadUserData() {
-    if (!currentUser) return;
-    
-    const userData = {
-        profile: currentUser,
-        orders: JSON.parse(localStorage.getItem('mm_orders') || '[]').filter(order => order.userId === currentUser.id),
-        addresses: JSON.parse(localStorage.getItem('mm_addresses') || '[]').filter(addr => addr.userId === currentUser.id),
-        wishlist: wishlist,
-        notifications: JSON.parse(localStorage.getItem('mm_notifications') || '{}')[currentUser.id] || {}
-    };
-    
-    const dataStr = JSON.stringify(userData, null, 2);
-    const dataBlob = new Blob([dataStr], {type: 'application/json'});
-    const url = URL.createObjectURL(dataBlob);
-    
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = `mighty-mahal-data-${currentUser.email}.json`;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    URL.revokeObjectURL(url);
-    
-    showToast('Data download started');
-}
-
-function deleteAccount() {
-    if (!currentUser) return;
-    
-    const confirmation = prompt('Type "DELETE" to confirm account deletion:');
-    if (confirmation !== 'DELETE') {
-        showToast('Account deletion cancelled');
-        return;
-    }
-    
-    // Remove user data
-    const users = JSON.parse(localStorage.getItem('mm_users') || '[]');
-    const updatedUsers = users.filter(u => u.id !== currentUser.id);
-    localStorage.setItem('mm_users', JSON.stringify(updatedUsers));
-    
-    // Remove user orders
-    const orders = JSON.parse(localStorage.getItem('mm_orders') || '[]');
-    const updatedOrders = orders.filter(order => order.userId !== currentUser.id);
-    localStorage.setItem('mm_orders', JSON.stringify(updatedOrders));
-    
-    // Remove user addresses
-    const addresses = JSON.parse(localStorage.getItem('mm_addresses') || '[]');
-    const updatedAddresses = addresses.filter(addr => addr.userId !== currentUser.id);
-    localStorage.setItem('mm_addresses', JSON.stringify(updatedAddresses));
-    
-    // Clear current session
-    localStorage.removeItem('mm_currentUser');
-    currentUser = null;
-    
-    // Redirect to home and close profile
-    profileSection.classList.remove('active');
-    overlay.classList.remove('active');
-    updateProfileUI();
-    
-    showToast('Account deleted successfully');
-}
-
-function removeFromWishlist(productId) {
-    const index = wishlist.indexOf(productId);
-    if (index > -1) {
-        wishlist.splice(index, 1);
-        localStorage.setItem('mm_wishlist', JSON.stringify(wishlist));
-        updateWishlistCount();
-        loadWishlistData();
-        showToast('Removed from wishlist');
-    }
-}
-
-// Profile Sidebar Functions
+// Open profile sidebar
 function openProfileSidebar() {
     if (!profileSidebar) return;
     
@@ -1099,6 +647,7 @@ function openProfileSidebar() {
     showProfileSection('dashboard');
 }
 
+// Close profile sidebar
 function closeProfileSidebarHandler() {
     if (!profileSidebar) return;
     
@@ -1204,384 +753,6 @@ function loadRecentActivity() {
     `).join('');
 }
 
-function loadPasswordResetSection() {
-    // Add password strength checking
-    const newPasswordInput = document.getElementById('newPasswordReset');
-    const passwordStrength = document.getElementById('passwordStrength');
-    const requirements = {
-        length: document.getElementById('req-length'),
-        uppercase: document.getElementById('req-uppercase'),
-        lowercase: document.getElementById('req-lowercase'),
-        number: document.getElementById('req-number'),
-        special: document.getElementById('req-special')
-    };
-    
-    if (newPasswordInput && passwordStrength) {
-        newPasswordInput.addEventListener('input', (e) => {
-            const password = e.target.value;
-            const strength = checkPasswordStrength(password);
-            
-            passwordStrength.className = `password-strength ${strength.level}`;
-            
-            // Update requirements
-            if (requirements.length) {
-                requirements.length.classList.toggle('valid', password.length >= 8);
-            }
-            if (requirements.uppercase) {
-                requirements.uppercase.classList.toggle('valid', /[A-Z]/.test(password));
-            }
-            if (requirements.lowercase) {
-                requirements.lowercase.classList.toggle('valid', /[a-z]/.test(password));
-            }
-            if (requirements.number) {
-                requirements.number.classList.toggle('valid', /\d/.test(password));
-            }
-            if (requirements.special) {
-                requirements.special.classList.toggle('valid', /[!@#$%^&*(),.?":{}|<>]/.test(password));
-            }
-        });
-    }
-    
-    // Add reset password button handler
-    const resetPasswordBtn = document.getElementById('resetPasswordBtn');
-    if (resetPasswordBtn) {
-        resetPasswordBtn.addEventListener('click', handlePasswordReset);
-    }
-}
-
-function checkPasswordStrength(password) {
-    let score = 0;
-    
-    if (password.length >= 8) score++;
-    if (/[A-Z]/.test(password)) score++;
-    if (/[a-z]/.test(password)) score++;
-    if (/\d/.test(password)) score++;
-    if (/[!@#$%^&*(),.?":{}|<>]/.test(password)) score++;
-    
-    if (score < 3) return { level: 'weak', score };
-    if (score < 5) return { level: 'medium', score };
-    return { level: 'strong', score };
-}
-
-function handlePasswordReset() {
-    const currentPassword = document.getElementById('currentPasswordReset').value;
-    const newPassword = document.getElementById('newPasswordReset').value;
-    const confirmPassword = document.getElementById('confirmPasswordReset').value;
-    
-    if (!currentPassword || !newPassword || !confirmPassword) {
-        showToast('Please fill all password fields');
-        return;
-    }
-    
-    if (newPassword !== confirmPassword) {
-        showToast('New passwords do not match');
-        return;
-    }
-    
-    const strength = checkPasswordStrength(newPassword);
-    if (strength.score < 3) {
-        showToast('Password is too weak. Please meet all requirements.');
-        return;
-    }
-    
-    // In a real app, verify current password
-    if (currentUser) {
-        currentUser.password = newPassword;
-        const users = JSON.parse(localStorage.getItem('mm_users') || '[]');
-        const userIndex = users.findIndex(u => u.id === currentUser.id);
-        if (userIndex !== -1) {
-            users[userIndex] = currentUser;
-            localStorage.setItem('mm_users', JSON.stringify(users));
-            
-            // Clear fields
-            document.getElementById('currentPasswordReset').value = '';
-            document.getElementById('newPasswordReset').value = '';
-            document.getElementById('confirmPasswordReset').value = '';
-            
-            showToast('Password reset successfully');
-        }
-    }
-}
-
-function loadAccountSettingsData() {
-    if (!currentUser) return;
-    
-    // Load personal info
-    const settingsName = document.getElementById('settingsName');
-    const settingsEmail = document.getElementById('settingsEmail');
-    const settingsPhone = document.getElementById('settingsPhone');
-    const settingsDOB = document.getElementById('settingsDOB');
-    const settingsAddress = document.getElementById('settingsAddress');
-    
-    if (settingsName) settingsName.value = currentUser.name || '';
-    if (settingsEmail) settingsEmail.value = currentUser.email || '';
-    if (settingsPhone) settingsPhone.value = currentUser.phone || '';
-    if (settingsDOB) settingsDOB.value = currentUser.dob || '';
-    if (settingsAddress) settingsAddress.value = currentUser.address || '';
-    
-    // Load notification preferences
-    const notifications = JSON.parse(localStorage.getItem('mm_notifications') || '{}');
-    const userNotifications = notifications[currentUser.id] || {};
-    
-    const emailOrderUpdates = document.getElementById('emailOrderUpdates');
-    const emailPromotions = document.getElementById('emailPromotions');
-    const emailNewsletter = document.getElementById('emailNewsletter');
-    const smsOrderUpdates = document.getElementById('smsOrderUpdates');
-    const smsDelivery = document.getElementById('smsDelivery');
-    
-    if (emailOrderUpdates) emailOrderUpdates.checked = userNotifications.emailOrders !== false;
-    if (emailPromotions) emailPromotions.checked = userNotifications.emailPromotions === true;
-    if (emailNewsletter) emailNewsletter.checked = userNotifications.emailNewsletter !== false;
-    if (smsOrderUpdates) smsOrderUpdates.checked = userNotifications.smsOrders === true;
-    if (smsDelivery) smsDelivery.checked = userNotifications.smsDelivery !== false;
-    
-    // Add save handlers
-    const savePersonalSettings = document.getElementById('savePersonalSettings');
-    const saveNotificationSettings = document.getElementById('saveNotificationSettings');
-    const savePrivacySettings = document.getElementById('savePrivacySettings');
-    
-    if (savePersonalSettings) {
-        savePersonalSettings.addEventListener('click', handleSavePersonalSettings);
-    }
-    if (saveNotificationSettings) {
-        saveNotificationSettings.addEventListener('click', handleSaveNotificationSettings);
-    }
-    if (savePrivacySettings) {
-        savePrivacySettings.addEventListener('click', handleSavePrivacySettings);
-    }
-}
-
-function handleSavePersonalSettings() {
-    if (!currentUser) return;
-    
-    const settingsName = document.getElementById('settingsName');
-    const settingsPhone = document.getElementById('settingsPhone');
-    const settingsDOB = document.getElementById('settingsDOB');
-    const settingsAddress = document.getElementById('settingsAddress');
-    
-    currentUser.name = settingsName?.value || currentUser.name;
-    currentUser.phone = settingsPhone?.value || currentUser.phone;
-    currentUser.dob = settingsDOB?.value || currentUser.dob;
-    currentUser.address = settingsAddress?.value || currentUser.address;
-    
-    // Update in storage
-    const users = JSON.parse(localStorage.getItem('mm_users') || '[]');
-    const userIndex = users.findIndex(u => u.id === currentUser.id);
-    if (userIndex !== -1) {
-        users[userIndex] = currentUser;
-        localStorage.setItem('mm_users', JSON.stringify(users));
-        saveUserData();
-        updateProfileUI();
-        updateSidebarUserInfo();
-        showToast('Personal settings saved successfully');
-    }
-}
-
-function handleSaveNotificationSettings() {
-    if (!currentUser) return;
-    
-    const notifications = JSON.parse(localStorage.getItem('mm_notifications') || '{}');
-    
-    notifications[currentUser.id] = {
-        emailOrders: document.getElementById('emailOrderUpdates')?.checked || false,
-        emailPromotions: document.getElementById('emailPromotions')?.checked || false,
-        emailNewsletter: document.getElementById('emailNewsletter')?.checked || false,
-        smsOrders: document.getElementById('smsOrderUpdates')?.checked || false,
-        smsDelivery: document.getElementById('smsDelivery')?.checked || false
-    };
-    
-    localStorage.setItem('mm_notifications', JSON.stringify(notifications));
-    showToast('Notification preferences saved');
-}
-
-function handleSavePrivacySettings() {
-    showToast('Privacy settings saved');
-}
-
-function loadSiteAnalytics() {
-    // Load analytics data
-    loadShoppingBehavior();
-    loadUsageStatistics();
-}
-
-function loadShoppingBehavior() {
-    if (!currentUser) return;
-    
-    const orders = JSON.parse(localStorage.getItem('mm_orders') || '[]');
-    const userOrders = orders.filter(order => order.userId === currentUser.id);
-    
-    // Calculate category spending
-    const categorySpending = {};
-    userOrders.forEach(order => {
-        order.items.forEach(item => {
-            const product = products.find(p => p.id === item.id);
-            if (product) {
-                const category = product.category;
-                categorySpending[category] = (categorySpending[category] || 0) + (item.price * item.quantity);
-            }
-        });
-    });
-    
-    // Update chart (simplified version)
-    const totalSpent = Object.values(categorySpending).reduce((sum, amount) => sum + amount, 0);
-    if (totalSpent > 0) {
-        Object.entries(categorySpending).forEach(([category, amount]) => {
-            const percentage = Math.round((amount / totalSpent) * 100);
-            // Update chart bars if they exist
-        });
-    }
-}
-
-function loadUsageStatistics() {
-    // Load usage statistics from localStorage or generate mock data
-    const stats = JSON.parse(localStorage.getItem('mm_user_stats') || '{}');
-    const userStats = stats[currentUser?.id] || {
-        totalVisits: Math.floor(Math.random() * 50) + 10,
-        avgSessionTime: Math.floor(Math.random() * 30) + 5,
-        pagesViewed: Math.floor(Math.random() * 200) + 50
-    };
-    
-    const totalVisits = document.getElementById('totalVisits');
-    const avgSessionTime = document.getElementById('avgSessionTime');
-    const pagesViewed = document.getElementById('pagesViewed');
-    
-    if (totalVisits) totalVisits.textContent = userStats.totalVisits;
-    if (avgSessionTime) avgSessionTime.textContent = `${userStats.avgSessionTime} min`;
-    if (pagesViewed) pagesViewed.textContent = userStats.pagesViewed;
-}
-
-function loadAddressValidation() {
-    const validateAddressBtn = document.getElementById('validateAddressBtn');
-    const savedAddressList = document.getElementById('savedAddressList');
-    const addNewAddressBtn = document.getElementById('addNewAddressBtn');
-    
-    if (validateAddressBtn) {
-        validateAddressBtn.addEventListener('click', handleAddressValidation);
-    }
-    
-    if (addNewAddressBtn) {
-        addNewAddressBtn.addEventListener('click', addNewAddress);
-    }
-    
-    // Load saved addresses
-    loadSavedAddresses();
-}
-
-function handleAddressValidation() {
-    const addressToValidate = document.getElementById('addressToValidate');
-    const validationResult = document.getElementById('validationResult');
-    const resultContent = document.getElementById('resultContent');
-    
-    if (!addressToValidate || !addressToValidate.value.trim()) {
-        showToast('Please enter an address to validate');
-        return;
-    }
-    
-    // Mock validation (in real app, use a geocoding API)
-    const address = addressToValidate.value.trim();
-    const isValid = address.length > 10 && address.includes(',');
-    
-    if (validationResult && resultContent) {
-        validationResult.style.display = 'block';
-        validationResult.className = `validation-result ${isValid ? 'success' : 'error'}`;
-        
-        if (isValid) {
-            resultContent.innerHTML = `
-                <div class="validation-success">
-                    <i class="fas fa-check-circle"></i>
-                    <h4>Address Validated Successfully</h4>
-                    <p><strong>Formatted Address:</strong></p>
-                    <p>${address}</p>
-                    <p><strong>Coordinates:</strong> ${(Math.random() * 90).toFixed(6)}, ${(Math.random() * 180).toFixed(6)}</p>
-                    <button class="btn btn-sm" onclick="saveValidatedAddress('${address}')">Save This Address</button>
-                </div>
-            `;
-        } else {
-            resultContent.innerHTML = `
-                <div class="validation-error">
-                    <i class="fas fa-exclamation-triangle"></i>
-                    <h4>Address Validation Failed</h4>
-                    <p>The address could not be validated. Please check and try again.</p>
-                    <ul>
-                        <li>Ensure the address includes street, city, and state</li>
-                        <li>Use proper formatting with commas</li>
-                        <li>Check for spelling errors</li>
-                    </ul>
-                </div>
-            `;
-        }
-    }
-}
-
-function saveValidatedAddress(address) {
-    // Implementation for saving validated address
-    showToast('Address saved successfully');
-    loadSavedAddresses();
-}
-
-function loadSavedAddresses() {
-    const savedAddressList = document.getElementById('savedAddressList');
-    if (!savedAddressList || !currentUser) return;
-    
-    const addresses = JSON.parse(localStorage.getItem('mm_addresses') || '[]');
-    const userAddresses = addresses.filter(addr => addr.userId === currentUser.id);
-    
-    if (userAddresses.length === 0) {
-        savedAddressList.innerHTML = '<p>No saved addresses</p>';
-        return;
-    }
-    
-    savedAddressList.innerHTML = userAddresses.map(address => `
-        <div class="address-item ${address.isDefault ? 'default' : ''}">
-            <h4>${address.type} Address ${address.isDefault ? '(Default)' : ''}</h4>
-            <p>${address.name}</p>
-            <p>${address.address}</p>
-            <p>${address.city}, ${address.state} - ${address.pincode}</p>
-            <p>Phone: ${address.phone}</p>
-            <div class="address-actions">
-                <button class="btn btn-sm" onclick="validateExistingAddress(${address.id})">Validate</button>
-                <button class="btn btn-outline btn-sm" onclick="editAddress(${address.id})">Edit</button>
-                <button class="btn btn-danger btn-sm" onclick="deleteAddress(${address.id})">Delete</button>
-            </div>
-        </div>
-    `).join('');
-}
-
-function validateExistingAddress(addressId) {
-    showToast('Address validation in progress...');
-    // Mock validation
-    setTimeout(() => {
-        showToast('Address validated successfully');
-    }, 1000);
-}
-
-function loadSidebarOrderHistory() {
-    const sidebarOrderList = document.getElementById('sidebarOrderList');
-    if (!sidebarOrderList || !currentUser) return;
-    
-    const orders = JSON.parse(localStorage.getItem('mm_orders') || '[]');
-    const userOrders = orders.filter(order => order.userId === currentUser.id);
-    
-    if (userOrders.length === 0) {
-        sidebarOrderList.innerHTML = '<div class="empty-state"><p>No orders found</p></div>';
-        return;
-    }
-    
-    sidebarOrderList.innerHTML = userOrders.map(order => `
-        <div class="order-item">
-            <div class="order-header">
-                <h4>Order #${order.id}</h4>
-                <span class="order-status ${order.status}">${order.status}</span>
-            </div>
-            <div class="order-details">
-                <p><strong>Date:</strong> ${new Date(order.date).toLocaleDateString()}</p>
-                <p><strong>Total:</strong> ₹${order.total.toFixed(2)}</p>
-                <p><strong>Items:</strong> ${order.items.length} item(s)</p>
-            </div>
-        </div>
-    `).join('');
-}
-
 function loadSidebarWishlist() {
     const sidebarWishlistItems = document.getElementById('sidebarWishlistItems');
     if (!sidebarWishlistItems) return;
@@ -1599,19 +770,48 @@ function loadSidebarWishlist() {
             <h4>${product.name}</h4>
             <div class="price">₹${product.price.toFixed(2)}</div>
             <div class="wishlist-actions">
-                <button class="btn btn-sm" onclick="addToCart(${product.id})">Add to Cart</button>
+                <button class="btn btn-sm" onclick="addToCartFromWishlist(${product.id})">Add to Cart</button>
                 <button class="btn btn-outline btn-sm" onclick="removeFromWishlist(${product.id})">Remove</button>
             </div>
         </div>
     `).join('');
 }
 
-function logoutUser() {
-    localStorage.removeItem('mm_currentUser');
-    currentUser = null;
-    closeProfileSidebarHandler();
-    updateProfileUI();
-    showToast('Logged out successfully');
+function addToCartFromWishlist(productId) {
+    const product = products.find(p => p.id === productId);
+    if (product) {
+        const existingItem = cart.find(item => item.id === productId);
+        
+        if (existingItem) {
+            existingItem.quantity++;
+        } else {
+            cart.push({
+                id: product.id,
+                name: product.name,
+                price: product.price,
+                quantity: 1,
+                image: product.image,
+                size: product.sizes ? product.sizes[0] : null
+            });
+        }
+        
+        updateCartCount();
+        showToast('Item added to cart!');
+        
+        if (cartSidebar.classList.contains('active')) {
+            renderCartItems();
+        }
+    }
+}
+
+function removeFromWishlist(productId) {
+    const index = wishlist.indexOf(productId);
+    if (index > -1) {
+        wishlist.splice(index, 1);
+        updateWishlistCount();
+        loadSidebarWishlist();
+        showToast('Removed from wishlist');
+    }
 }
 
 function checkout() {
@@ -1661,24 +861,33 @@ function placeOrder() {
     // Save order
     orders.push(order);
     saveUserData();
+    currentOrder = order;
 
-    // Generate invoice
-    generateInvoice(order);
-
-    // Clear cart
-    cart = [];
-    updateCartCount();
-
-    // Close modals
+    // Show confirmation modal
+    orderIdPlaceholder.textContent = `#${order.id}`;
     paymentModal.classList.remove('active');
-    cartSidebar.classList.remove('active');
-    overlay.classList.remove('active');
-    document.body.style.overflow = '';
-
-    // Update order history
-    loadOrderHistory();
+    confirmationModal.classList.add('active');
 
     showToast('Order placed successfully!');
+}
+
+function downloadInvoiceHandler() {
+    if (currentOrder) {
+        generateInvoice(currentOrder);
+    }
+    closeConfirmationModalHandler();
+}
+
+function continueShoppingHandler() {
+    closeConfirmationModalHandler();
+    // Reset cart
+    cart = [];
+    updateCartCount();
+    // Close any open modals
+    cartSidebar.classList.remove('active');
+    paymentModal.classList.remove('active');
+    // Scroll to top
+    window.scrollTo(0, 0);
 }
 
 function generateInvoice(order) {
@@ -1713,6 +922,7 @@ function generateInvoice(order) {
     doc.setTextColor(255, 255, 255);
     doc.rect(20, 100, 170, 10, 'F');
     doc.text('Product', 25, 106);
+    doc.text('Size', 80, 106);
     doc.text('Price', 120, 106);
     doc.text('Qty', 150, 106);
     doc.text('Total', 170, 106);
@@ -1724,6 +934,7 @@ function generateInvoice(order) {
     let y = 115;
     order.items.forEach(item => {
         doc.text(item.name, 25, y);
+        doc.text(item.size || '-', 80, y);
         doc.text(`₹${item.price.toLocaleString()}`, 120, y);
         doc.text(item.quantity.toString(), 150, y);
         doc.text(`₹${(item.price * item.quantity).toLocaleString()}`, 170, y);
@@ -1744,10 +955,11 @@ function generateInvoice(order) {
     doc.save(`invoice-${order.id}.pdf`);
 }
 
-function loadOrderHistory() {
+function loadSidebarOrderHistory() {
     if (!currentUser) return;
 
     const userOrders = orders.filter(order => order.userId === currentUser.id);
+    const orderList = document.getElementById('sidebarOrderList');
 
     if (userOrders.length === 0) {
         orderList.innerHTML = '<p style="text-align:center; padding:30px;">You have no orders yet</p>';
@@ -1755,47 +967,27 @@ function loadOrderHistory() {
     }
 
     orderList.innerHTML = '';
-
     userOrders.sort((a, b) => new Date(b.date) - new Date(a.date)).forEach(order => {
         const orderCard = document.createElement('div');
         orderCard.className = 'order-card';
-
-        const orderDate = new Date(order.date).toLocaleDateString();
-        const orderTime = new Date(order.date).toLocaleTimeString();
-
         orderCard.innerHTML = `
-                    <div class="order-header">
-                        <div>
-                            <strong>Order #${order.id}</strong>
-                            <div>${orderDate} at ${orderTime}</div>
-                        </div>
-                        <div>
-                            <span class="order-status">${order.status}</span>
-                        </div>
-                    </div>
-                    <div class="order-details">
-                        <div class="order-items">
-                            ${order.items.map(item => `
-                                <div class="order-item">
-                                    <div class="order-item-img">
-                                        <i class="${item.icon}"></i>
-                                    </div>
-                                    <div>
-                                        <div>${item.name}</div>
-                                        <div>₹${item.price.toLocaleString()} × ${item.quantity}</div>
-                                    </div>
-                                </div>
-                            `).join('')}
-                        </div>
-                    </div>
-                    <div class="order-summary">
-                        <div>Total:</div>
-                        <div>₹${order.total.toLocaleString()}</div>
-                    </div>
-                    <div class="order-actions">
-                        <button class="invoice-btn" data-id="${order.id}">Download Invoice</button>
-                    </div>
-                `;
+            <div class="order-header">
+                <div>
+                    <strong>Order #${order.id}</strong>
+                    <div>${new Date(order.date).toLocaleDateString()}</div>
+                </div>
+                <div>
+                    <span class="order-status">${order.status}</span>
+                </div>
+            </div>
+            <div class="order-summary">
+                <div>Total:</div>
+                <div>₹${order.total.toLocaleString()}</div>
+            </div>
+            <div class="order-actions">
+                <button class="invoice-btn" data-id="${order.id}">Download Invoice</button>
+            </div>
+        `;
 
         orderList.appendChild(orderCard);
     });
@@ -1812,85 +1004,984 @@ function loadOrderHistory() {
     });
 }
 
-
-// Add these variables at the top with other DOM elements
-const confirmationModal = document.getElementById('confirmationModal');
-const closeConfirmationModal = document.getElementById('closeConfirmationModal');
-const downloadInvoiceBtn = document.getElementById('downloadInvoiceBtn');
-const continueShoppingBtn = document.getElementById('continueShoppingBtn');
-const orderIdPlaceholder = document.getElementById('orderIdPlaceholder');
-
-// Add these event listeners in the DOMContentLoaded event
-closeConfirmationModal.addEventListener('click', closeConfirmationModalHandler);
-downloadInvoiceBtn.addEventListener('click', downloadInvoiceHandler);
-continueShoppingBtn.addEventListener('click', continueShoppingHandler);
-
-// Add these new functions
-function closeConfirmationModalHandler() {
-    confirmationModal.classList.remove('active');
-    overlay.classList.remove('active');
-    document.body.style.overflow = '';
+// Helper functions for other sections (simplified implementations)
+function loadPasswordResetSection() {
+    // Implementation for password reset section
 }
 
-function downloadInvoiceHandler() {
-    if (currentOrder) {
-        generateInvoice(currentOrder);
+function loadAccountSettingsData() {
+    // Implementation for account settings
+}
+
+function loadSiteAnalytics() {
+    // Implementation for site analytics
+}
+
+function loadAddressValidation() {
+    // Implementation for address validation
+}
+// Password Reset Section Implementation
+function loadPasswordResetSection() {
+    const currentPasswordReset = document.getElementById('currentPasswordReset');
+    const newPasswordReset = document.getElementById('newPasswordReset');
+    const confirmPasswordReset = document.getElementById('confirmPasswordReset');
+    const resetPasswordBtn = document.getElementById('resetPasswordBtn');
+    const passwordStrength = document.getElementById('passwordStrength');
+    const reqLength = document.getElementById('req-length');
+    const reqUppercase = document.getElementById('req-uppercase');
+    const reqLowercase = document.getElementById('req-lowercase');
+    const reqNumber = document.getElementById('req-number');
+    const reqSpecial = document.getElementById('req-special');
+
+    // Password strength checker
+    newPasswordReset.addEventListener('input', () => {
+        const password = newPasswordReset.value;
+        let strength = 0;
+        
+        // Check length
+        if (password.length >= 8) {
+            strength++;
+            reqLength.classList.add('valid');
+        } else {
+            reqLength.classList.remove('valid');
+        }
+        
+        // Check uppercase
+        if (/[A-Z]/.test(password)) {
+            strength++;
+            reqUppercase.classList.add('valid');
+        } else {
+            reqUppercase.classList.remove('valid');
+        }
+        
+        // Check lowercase
+        if (/[a-z]/.test(password)) {
+            strength++;
+            reqLowercase.classList.add('valid');
+        } else {
+            reqLowercase.classList.remove('valid');
+        }
+        
+        // Check number
+        if (/\d/.test(password)) {
+            strength++;
+            reqNumber.classList.add('valid');
+        } else {
+            reqNumber.classList.remove('valid');
+        }
+        
+        // Check special character
+        if (/[^A-Za-z0-9]/.test(password)) {
+            strength++;
+            reqSpecial.classList.add('valid');
+        } else {
+            reqSpecial.classList.remove('valid');
+        }
+        
+        // Update strength meter
+        passwordStrength.className = 'password-strength';
+        if (password.length > 0) {
+            if (strength < 3) {
+                passwordStrength.classList.add('weak');
+            } else if (strength < 5) {
+                passwordStrength.classList.add('medium');
+            } else {
+                passwordStrength.classList.add('strong');
+            }
+        }
+    });
+
+    resetPasswordBtn.addEventListener('click', () => {
+        if (!currentUser) {
+            showToast('Please login to change password');
+            return;
+        }
+
+        if (!currentPasswordReset.value || !newPasswordReset.value || !confirmPasswordReset.value) {
+            showToast('Please fill all fields');
+            return;
+        }
+
+        if (currentPasswordReset.value !== currentUser.password) {
+            showToast('Current password is incorrect');
+            return;
+        }
+
+        if (newPasswordReset.value !== confirmPasswordReset.value) {
+            showToast('New passwords do not match');
+            return;
+        }
+
+        // Check password strength
+        const password = newPasswordReset.value;
+        if (password.length < 8 || !/[A-Z]/.test(password) || 
+            !/[a-z]/.test(password) || !/\d/.test(password) || 
+            !/[^A-Za-z0-9]/.test(password)) {
+            showToast('Password does not meet requirements');
+            return;
+        }
+
+        // Update password
+        currentUser.password = newPasswordReset.value;
+        
+        // Update in users array
+        const storedUsers = localStorage.getItem('mm_users');
+        if (storedUsers) {
+            const users = JSON.parse(storedUsers);
+            const userIndex = users.findIndex(u => u.id === currentUser.id);
+            if (userIndex !== -1) {
+                users[userIndex] = currentUser;
+                localStorage.setItem('mm_users', JSON.stringify(users));
+                saveUserData();
+                
+                // Clear fields
+                currentPasswordReset.value = '';
+                newPasswordReset.value = '';
+                confirmPasswordReset.value = '';
+                passwordStrength.className = 'password-strength';
+                
+                showToast('Password changed successfully');
+            }
+        }
+    });
+}
+
+// Account Settings Implementation
+function loadAccountSettingsData() {
+    if (!currentUser) return;
+
+    // Personal Info Tab
+    const settingsName = document.getElementById('settingsName');
+    const settingsEmail = document.getElementById('settingsEmail');
+    const settingsPhone = document.getElementById('settingsPhone');
+    const settingsDOB = document.getElementById('settingsDOB');
+    const settingsAddress = document.getElementById('settingsAddress');
+    const savePersonalSettings = document.getElementById('savePersonalSettings');
+
+    // Set current values
+    settingsName.value = currentUser.name;
+    settingsEmail.value = currentUser.email;
+    settingsPhone.value = currentUser.phone || '';
+    settingsDOB.value = currentUser.dob || '';
+    settingsAddress.value = currentUser.address || '';
+
+    savePersonalSettings.addEventListener('click', () => {
+        if (!settingsName.value || !settingsPhone.value || !settingsAddress.value) {
+            showToast('Please fill all required fields');
+            return;
+        }
+
+        currentUser.name = settingsName.value;
+        currentUser.phone = settingsPhone.value;
+        currentUser.dob = settingsDOB.value;
+        currentUser.address = settingsAddress.value;
+
+        // Update in users array
+        const storedUsers = localStorage.getItem('mm_users');
+        if (storedUsers) {
+            const users = JSON.parse(storedUsers);
+            const userIndex = users.findIndex(u => u.id === currentUser.id);
+            if (userIndex !== -1) {
+                users[userIndex] = currentUser;
+                localStorage.setItem('mm_users', JSON.stringify(users));
+                saveUserData();
+                updateSidebarUserInfo();
+                showToast('Profile updated successfully');
+            }
+        }
+    });
+
+    // Notifications Tab
+    const saveNotificationBtn = document.getElementById('saveNotificationBtn');
+    saveNotificationBtn.addEventListener('click', () => {
+        const emailOrderUpdates = document.getElementById('emailOrderUpdates').checked;
+        const emailPromotions = document.getElementById('emailPromotions').checked;
+        const emailNewsletter = document.getElementById('emailNewsletter').checked;
+        const smsOrderUpdates = document.getElementById('smsOrderUpdates').checked;
+        const smsDelivery = document.getElementById('smsDelivery').checked;
+
+        // Save notification preferences
+        currentUser.notifications = {
+            emailOrderUpdates,
+            emailPromotions,
+            emailNewsletter,
+            smsOrderUpdates,
+            smsDelivery
+        };
+
+        saveUserData();
+        showToast('Notification preferences saved');
+    });
+
+    // Privacy Tab
+    const savePrivacySettings = document.getElementById('savePrivacySettings');
+    savePrivacySettings.addEventListener('click', () => {
+        const profileVisibility = document.getElementById('profileVisibility').value;
+        const allowDataCollection = document.getElementById('allowDataCollection').checked;
+        const allowMarketing = document.getElementById('allowMarketing').checked;
+
+        // Save privacy settings
+        currentUser.privacy = {
+            profileVisibility,
+            allowDataCollection,
+            allowMarketing
+        };
+
+        saveUserData();
+        showToast('Privacy settings saved');
+    });
+
+    // Security Tab
+    const enable2FA = document.getElementById('enable2FA');
+    const viewSessions = document.getElementById('viewSessions');
+    const deleteAccountSidebar = document.getElementById('deleteAccountSidebar');
+
+    enable2FA.addEventListener('click', () => {
+        showToast('Two-factor authentication setup will be sent to your email');
+    });
+
+    viewSessions.addEventListener('click', () => {
+        showToast('Active sessions will be displayed here');
+    });
+
+    deleteAccountSidebar.addEventListener('click', () => {
+        if (confirm('Are you sure you want to delete your account? This action cannot be undone.')) {
+            // Remove user from users array
+            const storedUsers = localStorage.getItem('mm_users');
+            if (storedUsers) {
+                const users = JSON.parse(storedUsers);
+                const updatedUsers = users.filter(u => u.id !== currentUser.id);
+                localStorage.setItem('mm_users', JSON.stringify(updatedUsers));
+                
+                // Clear user data
+                currentUser = null;
+                cart = [];
+                wishlist = [];
+                saveUserData();
+                updateCartCount();
+                updateWishlistCount();
+                closeProfileSidebarHandler();
+                showToast('Account deleted successfully');
+            }
+        }
+    });
+}
+
+// Site Analytics Implementation
+function loadSiteAnalytics() {
+    if (!currentUser) return;
+
+    // Simulate analytics data
+    const totalVisits = document.getElementById('totalVisits');
+    const avgSessionTime = document.getElementById('avgSessionTime');
+    const pagesViewed = document.getElementById('pagesViewed');
+
+    // Generate random data for demo purposes
+    totalVisits.textContent = Math.floor(Math.random() * 100) + 20;
+    avgSessionTime.textContent = Math.floor(Math.random() * 10) + 2 + ' min';
+    pagesViewed.textContent = Math.floor(Math.random() * 30) + 5;
+
+    // Update shopping chart data
+    const shoppingChart = document.getElementById('shoppingChart');
+    const categories = ['Electronics', 'Fashion', 'Home & Kitchen', 'Beauty', 'Books'];
+    shoppingChart.innerHTML = '';
+
+    categories.forEach(category => {
+        const percentage = Math.floor(Math.random() * 60) + 10;
+        const chartItem = document.createElement('div');
+        chartItem.className = 'chart-item';
+        chartItem.innerHTML = `
+            <span class="chart-label">${category}</span>
+            <div class="chart-bar">
+                <div class="chart-fill" style="width: ${percentage}%"></div>
+            </div>
+            <span class="chart-value">${percentage}%</span>
+        `;
+        shoppingChart.appendChild(chartItem);
+    });
+}
+
+// Address Validation Implementation
+function loadAddressValidation() {
+    const addressToValidate = document.getElementById('addressToValidate');
+    const validateAddressBtn = document.getElementById('validateAddressBtn');
+    const validationResult = document.getElementById('validationResult');
+    const resultContent = document.getElementById('resultContent');
+    const savedAddressList = document.getElementById('savedAddressList');
+    const addNewAddressBtn = document.getElementById('addNewAddressBtn');
+
+    // Initialize saved addresses
+    if (currentUser && currentUser.addresses) {
+        renderSavedAddresses(currentUser.addresses);
+    } else if (currentUser) {
+        currentUser.addresses = [];
     }
-    closeConfirmationModalHandler();
+
+    validateAddressBtn.addEventListener('click', () => {
+        const address = addressToValidate.value.trim();
+        
+        if (!address) {
+            showToast('Please enter an address to validate');
+            return;
+        }
+
+        // Simulate address validation
+        validationResult.style.display = 'block';
+        validationResult.className = 'validation-result';
+        
+        // Random success/failure for demo
+        const isValid = Math.random() > 0.3;
+        
+        if (isValid) {
+            validationResult.classList.add('success');
+            resultContent.innerHTML = `
+                <div class="validation-success">
+                    <i class="fas fa-check-circle"></i>
+                    <h4>Address is valid</h4>
+                    <p>We can deliver to this address</p>
+                    <button class="btn" id="saveValidatedAddress">Save Address</button>
+                </div>
+            `;
+            
+            document.getElementById('saveValidatedAddress')?.addEventListener('click', () => {
+                saveAddress(address);
+            });
+        } else {
+            validationResult.classList.add('error');
+            resultContent.innerHTML = `
+                <div class="validation-error">
+                    <i class="fas fa-times-circle"></i>
+                    <h4>Address could not be verified</h4>
+                    <p>Please check the address and try again</p>
+                    <ul>
+                        <li>Make sure the street name is correct</li>
+                        <li>Include city and postal code</li>
+                        <li>Check for typos</li>
+                    </ul>
+                </div>
+            `;
+        }
+    });
+
+    addNewAddressBtn.addEventListener('click', () => {
+        const newAddress = prompt('Enter new address:');
+        if (newAddress && newAddress.trim()) {
+            saveAddress(newAddress.trim());
+        }
+    });
+
+    function saveAddress(address) {
+        if (!currentUser) return;
+        
+        if (!currentUser.addresses) {
+            currentUser.addresses = [];
+        }
+        
+        if (!currentUser.addresses.includes(address)) {
+            currentUser.addresses.push(address);
+            saveUserData();
+            renderSavedAddresses(currentUser.addresses);
+            showToast('Address saved successfully');
+            validationResult.style.display = 'none';
+        } else {
+            showToast('Address already exists');
+        }
+    }
+
+    function renderSavedAddresses(addresses) {
+        if (!savedAddressList) return;
+        
+        if (addresses.length === 0) {
+            savedAddressList.innerHTML = '<p>No saved addresses</p>';
+            return;
+        }
+        
+        savedAddressList.innerHTML = addresses.map((address, index) => `
+            <div class="address-item">
+                <p>${address}</p>
+                <div class="address-actions">
+                    <button class="btn btn-sm" onclick="setDefaultAddress(${index})">Set Default</button>
+                    <button class="btn btn-outline btn-sm" onclick="removeAddress(${index})">Remove</button>
+                </div>
+            </div>
+        `).join('');
+    }
 }
 
-function continueShoppingHandler() {
-    closeConfirmationModalHandler();
-    // Reset cart
-    cart = [];
+// Address management functions
+function setDefaultAddress(index) {
+    if (!currentUser || !currentUser.addresses || index >= currentUser.addresses.length) return;
+    
+    const address = currentUser.addresses[index];
+    currentUser.address = address; // Set as primary address
+    saveUserData();
+    showToast('Default address updated');
+    loadAddressValidation(); // Refresh the view
+}
+
+function removeAddress(index) {
+    if (!currentUser || !currentUser.addresses || index >= currentUser.addresses.length) return;
+    
+    if (confirm('Are you sure you want to remove this address?')) {
+        currentUser.addresses.splice(index, 1);
+        saveUserData();
+        showToast('Address removed');
+        loadAddressValidation(); // Refresh the view
+    }
+}
+
+// Initialize all sections when profile sidebar is opened
+function initializeProfileSections() {
+    loadDashboardData();
+    loadPasswordResetSection();
+    loadAccountSettingsData();
+    loadSiteAnalytics();
+    loadAddressValidation();
+}
+
+// Add to global scope for HTML onclick handlers
+window.addToCartFromWishlist = addToCartFromWishlist;
+window.removeFromWishlist = removeFromWishlist;
+window.setDefaultAddress = setDefaultAddress;
+window.removeAddress = removeAddress;
+
+// Initialize the application
+window.onload = function() {
+    loadUserData();
+    renderProducts(products);
     updateCartCount();
-    // Close any open modals
-    cartSidebar.classList.remove('active');
-    paymentModal.classList.remove('active');
-    // Scroll to top
-    window.scrollTo(0, 0);
+    updateWishlistCount();
+};
+// Additional Utility Functions
+
+// Format currency
+function formatCurrency(amount) {
+    return new Intl.NumberFormat('en-IN', { 
+        style: 'currency', 
+        currency: 'INR',
+        maximumFractionDigits: 0
+    }).format(amount);
 }
 
-// Modify the placeOrder function
-let currentOrder = null; // Add this at the top with other variables
+// Generate random ID
+function generateId() {
+    return Math.floor(Math.random() * 1000000) + 100000;
+}
 
-function placeOrder() {
+// Validate email format
+function isValidEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+// Validate phone number
+function isValidPhone(phone) {
+    return /^[0-9]{10}$/.test(phone);
+}
+
+// Enhanced Product Filtering
+function enhancedFilterProducts(category, searchTerm = '') {
+    let filteredProducts = products;
+    
+    if (category !== 'all') {
+        filteredProducts = filteredProducts.filter(product => product.category === category);
+    }
+    
+    if (searchTerm) {
+        const term = searchTerm.toLowerCase();
+        filteredProducts = filteredProducts.filter(product =>
+            product.name.toLowerCase().includes(term) ||
+            product.category.toLowerCase().includes(term) ||
+            (product.description && product.description.toLowerCase().includes(term))
+        );
+    }
+    
+    return filteredProducts;
+}
+
+// Product Detail Modal
+function showProductDetails(product) {
+    // Create modal elements
+    const modal = document.createElement('div');
+    modal.className = 'product-modal';
+    modal.innerHTML = `
+        <div class="product-modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="product-modal-body">
+                <div class="product-modal-images">
+                    <div class="main-image">
+                        <img src="${product.image}" alt="${product.name}">
+                    </div>
+                </div>
+                <div class="product-modal-info">
+                    <h2>${product.name}</h2>
+                    <div class="product-modal-price">
+                        ${formatCurrency(product.price)}
+                        ${product.oldPrice ? `<span class="old-price">${formatCurrency(product.oldPrice)}</span>` : ''}
+                    </div>
+                    <div class="product-modal-rating">
+                        ${renderRating(product.rating)} (${product.reviews} reviews)
+                    </div>
+                    ${product.sizes ? `
+                    <div class="product-modal-sizes">
+                        <h4>Size:</h4>
+                        <div class="size-options">
+                            ${product.sizes.map(size => `
+                                <button class="size-option" data-size="${size}">${size}</button>
+                            `).join('')}
+                        </div>
+                    </div>
+                    ` : ''}
+                    <div class="product-modal-actions">
+                        <button class="btn add-to-cart-modal" data-id="${product.id}">Add to Cart</button>
+                        <button class="btn btn-outline wishlist-modal" data-id="${product.id}">
+                            <i class="${wishlist.includes(product.id) ? 'fas' : 'far'} fa-heart"></i> Wishlist
+                        </button>
+                    </div>
+                    <div class="product-modal-description">
+                        <h4>Description</h4>
+                        <p>${product.description || 'No description available'}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    document.body.appendChild(modal);
+    document.body.style.overflow = 'hidden';
+    
+    // Add event listeners
+    modal.querySelector('.close-modal').addEventListener('click', () => {
+        document.body.removeChild(modal);
+        document.body.style.overflow = '';
+    });
+    
+    modal.querySelector('.add-to-cart-modal').addEventListener('click', (e) => {
+        const productId = parseInt(e.target.dataset.id);
+        const size = modal.querySelector('.size-option.selected')?.dataset.size || null;
+        addToCart({ target: { dataset: { id: productId }, closest: () => modal } }, size);
+        showToast('Added to cart!');
+    });
+    
+    modal.querySelector('.wishlist-modal').addEventListener('click', (e) => {
+        const productId = parseInt(e.target.closest('button').dataset.id);
+        toggleWishlist({ target: e.target.closest('button') });
+    });
+    
+    // Size selection
+    modal.querySelectorAll('.size-option').forEach(option => {
+        option.addEventListener('click', () => {
+            modal.querySelectorAll('.size-option').forEach(opt => opt.classList.remove('selected'));
+            option.classList.add('selected');
+        });
+    });
+    
+    // Close when clicking outside
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            document.body.removeChild(modal);
+            document.body.style.overflow = '';
+        }
+    });
+}
+
+// Enhanced Search with Debounce
+let searchTimeout;
+function enhancedHandleSearch() {
+    clearTimeout(searchTimeout);
+    searchTimeout = setTimeout(() => {
+        const searchTerm = searchInput.value.trim().toLowerCase();
+        const activeFilter = document.querySelector('.filter-btn.active')?.dataset.filter || 'all';
+        
+        if (searchTerm.length >= 2 || searchTerm.length === 0) {
+            const filteredProducts = enhancedFilterProducts(activeFilter, searchTerm);
+            renderProducts(filteredProducts);
+        }
+    }, 300);
+}
+
+// Update event listener for enhanced search
+searchInput.addEventListener('input', enhancedHandleSearch);
+
+// Order Status Tracking
+function trackOrder(orderId) {
+    const order = orders.find(o => o.id === orderId);
+    if (!order) return null;
+    
+    const statusStages = [
+        { status: 'Processing', description: 'Order received', time: order.date },
+        { status: 'Confirmed', description: 'Payment confirmed', time: addTime(order.date, 1) },
+        { status: 'Shipped', description: 'Shipped with tracking', time: addTime(order.date, 2) },
+        { status: 'Out for Delivery', description: 'With delivery agent', time: addTime(order.date, 3) },
+        { status: 'Delivered', description: 'Order delivered', time: addTime(order.date, 4) }
+    ];
+    
+    // Simulate current status based on order date
+    const now = new Date();
+    const orderDate = new Date(order.date);
+    const hoursSinceOrder = (now - orderDate) / (1000 * 60 * 60);
+    
+    let currentStage = Math.floor(hoursSinceOrder / 24);
+    if (currentStage >= statusStages.length) currentStage = statusStages.length - 1;
+    
+    return {
+        currentStatus: statusStages[currentStage].status,
+        stages: statusStages,
+        currentStage
+    };
+}
+
+function addTime(dateString, daysToAdd) {
+    const date = new Date(dateString);
+    date.setDate(date.getDate() + daysToAdd);
+    return date.toISOString();
+}
+
+// Order Tracking Modal
+function showOrderTracking(orderId) {
+    const trackingInfo = trackOrder(orderId);
+    if (!trackingInfo) {
+        showToast('Order not found');
+        return;
+    }
+    
+    const modal = document.createElement('div');
+    modal.className = 'tracking-modal';
+    modal.innerHTML = `
+        <div class="tracking-modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Order #${orderId} Tracking</h2>
+            <div class="tracking-status">
+                <div class="status-badge ${trackingInfo.currentStatus.toLowerCase().replace(' ', '-')}">
+                    ${trackingInfo.currentStatus}
+                </div>
+            </div>
+            <div class="tracking-timeline">
+                ${trackingInfo.stages.map((stage, index) => `
+                    <div class="timeline-step ${index <= trackingInfo.currentStage ? 'completed' : ''}">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h4>${stage.status}</h4>
+                            <p>${stage.description}</p>
+                            <small>${new Date(stage.time).toLocaleString()}</small>
+                        </div>
+                    </div>
+                `).join('')}
+            </div>
+            <div class="tracking-actions">
+                <button class="btn">Contact Support</button>
+                <button class="btn btn-outline">View Order Details</button>
+            </div>
+        </div>
+    `;
+    
+    document.body.appendChild(modal);
+    document.body.style.overflow = 'hidden';
+    
+    // Add event listeners
+    modal.querySelector('.close-modal').addEventListener('click', () => {
+        document.body.removeChild(modal);
+        document.body.style.overflow = '';
+    });
+    
+    // Close when clicking outside
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            document.body.removeChild(modal);
+            document.body.style.overflow = '';
+        }
+    });
+}
+
+// Enhanced Checkout Process
+function enhancedCheckout() {
     if (cart.length === 0) {
         showToast('Your cart is empty');
         return;
     }
 
     if (!currentUser) {
-        showToast('Please login to place order');
+        showToast('Please login to checkout');
+        switchAuthTab('login');
+        authModal.classList.add('active');
+        overlay.classList.add('active');
         return;
     }
 
-    // Calculate total
-    const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    // Check if default address is set
+    if (!currentUser.address) {
+        showToast('Please set a delivery address first');
+        openProfileSidebar();
+        showProfileSection('addressValidation');
+        return;
+    }
 
-    // Create order
-    const order = {
-        id: Date.now(),
-        userId: currentUser.id,
-        items: [...cart],
-        total,
-        date: new Date().toISOString(),
-        status: 'Processing',
-        paymentMethod: 'Cash on Delivery'
-    };
-
-    // Save order
-    orders.push(order);
-    saveUserData();
-    currentOrder = order; // Store for later use
-
-    // Show confirmation modal instead of downloading invoice
-    orderIdPlaceholder.textContent = `#${order.id}`;
-    paymentModal.classList.remove('active');
-    confirmationModal.classList.add('active');
-
-    // Clear cart but don't update UI yet (let user see confirmation)
-    // cart = []; - We'll clear it when they continue shopping
-    
-    showToast('Order placed successfully!');
+    paymentModal.classList.add('active');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
 }
+
+// Update checkout button event listener
+checkoutBtn.removeEventListener('click', checkout);
+checkoutBtn.addEventListener('click', enhancedCheckout);
+
+// Order History with Tracking
+function loadEnhancedOrderHistory() {
+    if (!currentUser) return;
+
+    const userOrders = orders.filter(order => order.userId === currentUser.id);
+    const orderList = document.getElementById('sidebarOrderList');
+
+    if (userOrders.length === 0) {
+        orderList.innerHTML = '<div class="empty-state"><p>You have no orders yet</p></div>';
+        return;
+    }
+
+    orderList.innerHTML = userOrders.sort((a, b) => new Date(b.date) - new Date(a.date)).map(order => `
+        <div class="order-card">
+            <div class="order-header">
+                <div>
+                    <strong>Order #${order.id}</strong>
+                    <div>${new Date(order.date).toLocaleDateString()}</div>
+                </div>
+                <div>
+                    <span class="order-status ${order.status.toLowerCase().replace(' ', '-')}">${order.status}</span>
+                </div>
+            </div>
+            <div class="order-summary">
+                <div>Total:</div>
+                <div>${formatCurrency(order.total)}</div>
+            </div>
+            <div class="order-actions">
+                <button class="btn btn-sm track-order" data-id="${order.id}">Track Order</button>
+                <button class="btn btn-outline btn-sm invoice-btn" data-id="${order.id}">Invoice</button>
+            </div>
+        </div>
+    `).join('');
+
+    // Add event listeners
+    document.querySelectorAll('.track-order').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const orderId = parseInt(e.target.dataset.id);
+            showOrderTracking(orderId);
+        });
+    });
+
+    document.querySelectorAll('.invoice-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const orderId = parseInt(e.target.dataset.id);
+            const order = orders.find(o => o.id === orderId);
+            if (order) generateInvoice(order);
+        });
+    });
+}
+
+// Replace original order history loader
+function loadSidebarOrderHistory() {
+    loadEnhancedOrderHistory();
+}
+
+// Product Review System
+function submitProductReview(productId, rating, comment) {
+    const product = products.find(p => p.id === productId);
+    if (!product) return false;
+    
+    if (!product.reviewsData) {
+        product.reviewsData = [];
+    }
+    
+    const review = {
+        id: generateId(),
+        userId: currentUser?.id || null,
+        userName: currentUser?.name || 'Anonymous',
+        rating,
+        comment,
+        date: new Date().toISOString()
+    };
+    
+    product.reviewsData.push(review);
+    
+    // Update average rating
+    const totalRatings = product.reviewsData.reduce((sum, r) => sum + r.rating, 0);
+    product.rating = parseFloat((totalRatings / product.reviewsData.length).toFixed(1));
+    product.reviews = product.reviewsData.length;
+    
+    return true;
+}
+
+// Review Modal
+function showReviewModal(productId) {
+    if (!currentUser) {
+        showToast('Please login to leave a review');
+        toggleAuthModal();
+        return;
+    }
+    
+    const product = products.find(p => p.id === productId);
+    if (!product) return;
+    
+    const modal = document.createElement('div');
+    modal.className = 'review-modal';
+    modal.innerHTML = `
+        <div class="review-modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Review ${product.name}</h2>
+            <div class="review-rating">
+                <div class="rating-stars">
+                    ${[1, 2, 3, 4, 5].map(i => `
+                        <i class="far fa-star" data-rating="${i}"></i>
+                    `).join('')}
+                </div>
+                <div class="rating-text">Select rating</div>
+            </div>
+            <div class="review-comment">
+                <textarea placeholder="Share your experience with this product..." rows="5"></textarea>
+            </div>
+            <button class="btn submit-review">Submit Review</button>
+        </div>
+    `;
+    
+    document.body.appendChild(modal);
+    document.body.style.overflow = 'hidden';
+    
+    let selectedRating = 0;
+    const stars = modal.querySelectorAll('.rating-stars i');
+    const ratingText = modal.querySelector('.rating-text');
+    
+    stars.forEach(star => {
+        star.addEventListener('click', () => {
+            const rating = parseInt(star.dataset.rating);
+            selectedRating = rating;
+            
+            stars.forEach((s, i) => {
+                if (i < rating) {
+                    s.classList.remove('far');
+                    s.classList.add('fas');
+                } else {
+                    s.classList.remove('fas');
+                    s.classList.add('far');
+                }
+            });
+            
+            const ratingTexts = [
+                'Poor',
+                'Fair',
+                'Good',
+                'Very Good',
+                'Excellent'
+            ];
+            
+            ratingText.textContent = ratingTexts[rating - 1];
+        });
+        
+        star.addEventListener('mouseover', () => {
+            const rating = parseInt(star.dataset.rating);
+            
+            stars.forEach((s, i) => {
+                if (i < rating) {
+                    s.classList.add('hover');
+                } else {
+                    s.classList.remove('hover');
+                }
+            });
+        });
+        
+        star.addEventListener('mouseout', () => {
+            stars.forEach(s => s.classList.remove('hover'));
+        });
+    });
+    
+    modal.querySelector('.submit-review').addEventListener('click', () => {
+        const comment = modal.querySelector('textarea').value.trim();
+        
+        if (selectedRating === 0) {
+            showToast('Please select a rating');
+            return;
+        }
+        
+        if (submitProductReview(productId, selectedRating, comment)) {
+            showToast('Thank you for your review!');
+            document.body.removeChild(modal);
+            document.body.style.overflow = '';
+            
+            // Refresh product display if needed
+            const activeFilter = document.querySelector('.filter-btn.active')?.dataset.filter || 'all';
+            const filteredProducts = enhancedFilterProducts(activeFilter, searchInput.value.trim());
+            renderProducts(filteredProducts);
+        } else {
+            showToast('Failed to submit review');
+        }
+    });
+    
+    modal.querySelector('.close-modal').addEventListener('click', () => {
+        document.body.removeChild(modal);
+        document.body.style.overflow = '';
+    });
+    
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            document.body.removeChild(modal);
+            document.body.style.overflow = '';
+        }
+    });
+}
+
+// Add review button to product details
+function addReviewButton(productId) {
+    const reviewBtn = document.createElement('button');
+    reviewBtn.className = 'btn btn-outline btn-sm review-btn';
+    reviewBtn.textContent = 'Write a Review';
+    reviewBtn.addEventListener('click', () => showReviewModal(productId));
+    return reviewBtn;
+}
+
+// Initialize all components
+function initializeAll() {
+    loadUserData();
+    renderProducts(products);
+    updateCartCount();
+    updateWishlistCount();
+    
+    // Add any additional initialization needed
+    if (currentUser) {
+        updateSidebarUserInfo();
+    }
+}
+
+// Final initialization
+document.addEventListener('DOMContentLoaded', initializeAll);
+// Service page navigation
+function showServicePage(pageId) {
+    document.getElementById('main-content').style.display = 'none';
+    document.getElementById('service-pages').style.display = 'block';
+    
+    // Hide all service pages
+    document.querySelectorAll('.service-page').forEach(page => {
+        page.style.display = 'none';
+    });
+    
+    // Show the requested page
+    document.getElementById(pageId).style.display = 'block';
+    
+    // Scroll to top
+    window.scrollTo(0, 0);
+}
+
+function showMainContent() {
+    document.getElementById('main-content').style.display = 'block';
+    document.getElementById('service-pages').style.display = 'none';
+    window.scrollTo(0, 0);
+}
+
+// FAQ accordion functionality
+document.addEventListener('click', (e) => {
+    if (e.target.classList.contains('faq-question') || 
+        e.target.parentElement.classList.contains('faq-question')) {
+        const question = e.target.classList.contains('faq-question') 
+            ? e.target 
+            : e.target.parentElement;
+        const answer = question.nextElementSibling;
+        
+        question.classList.toggle('active');
+        answer.classList.toggle('active');
+    }
+});
