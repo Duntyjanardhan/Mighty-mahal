@@ -104,6 +104,67 @@
     </div>
 
     <!-- Payment Modal -->
+    
+
+<!-- Address Validation Modal -->
+<div class="payment-modal" id="addressModal">
+    <div class="payment-header">
+        <h2>Checkout - Address Details</h2>
+        <button class="close-modal" id="closeAddressModal"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="payment-content" style="max-height:80vh; overflow-y:auto;">
+        
+        <!-- Shipping Address -->
+        <h3>Shipping Address</h3>
+        <div class="form-group"><label>Full Name</label><input type="text" id="shippingName" placeholder="Receiver's full name"></div>
+        <div class="form-group"><label>Email</label><input type="email" id="shippingEmail" placeholder="Receiver's email"></div>
+        <div class="form-group"><label>Phone</label><input type="tel" id="shippingPhone" placeholder="Receiver's phone number"></div>
+        <div class="form-group"><label>Address Line 1</label><input type="text" id="shippingAddress1" placeholder="Street address, P.O. box, company name, etc."></div>
+        <div class="form-group"><label>Address Line 2</label><input type="text" id="shippingAddress2" placeholder="Apartment, suite, unit, etc."></div>
+        <div class="form-group"><label>City</label><input type="text" id="shippingCity" placeholder="City"></div>
+        <div class="form-group"><label>State</label>
+            <select id="shippingState">
+                <option value="">Select State</option>
+                <option>Andhra Pradesh</option><option>Arunachal Pradesh</option><option>Assam</option><option>Bihar</option>
+                <option>Chhattisgarh</option><option>Goa</option><option>Gujarat</option><option>Haryana</option><option>Himachal Pradesh</option>
+                <option>Jharkhand</option><option>Karnataka</option><option>Kerala</option><option>Madhya Pradesh</option><option>Maharashtra</option>
+                <option>Manipur</option><option>Meghalaya</option><option>Mizoram</option><option>Nagaland</option><option>Odisha</option>
+                <option>Punjab</option><option>Rajasthan</option><option>Sikkim</option><option>Tamil Nadu</option><option>Telangana</option>
+                <option>Tripura</option><option>Uttar Pradesh</option><option>Uttarakhand</option><option>West Bengal</option><option>Delhi</option>
+                <option>Jammu & Kashmir</option><option>Ladakh</option>
+            </select>
+        </div>
+        <div class="form-group"><label>Postal Code</label><input type="text" id="shippingZip" placeholder="PIN Code"></div>
+        <div class="form-group"><label>Country</label><input type="text" id="shippingCountry" value="India" readonly></div>
+
+        <!-- Checkbox for billing -->
+        <div class="form-group">
+            <input type="checkbox" id="sameAsShipping" checked>
+            <label for="sameAsShipping">Billing address same as shipping</label>
+        </div>
+
+        <!-- Billing Address -->
+        <div id="billingSection">
+            <h3>Billing Address</h3>
+            <div class="form-group"><label>Full Name</label><input type="text" id="billingName" placeholder="Sender's full name"></div>
+            <div class="form-group"><label>Email</label><input type="email" id="billingEmail" placeholder="Sender's email"></div>
+            <div class="form-group"><label>Phone</label><input type="tel" id="billingPhone" placeholder="Sender's phone number"></div>
+            <div class="form-group"><label>Address Line 1</label><input type="text" id="billingAddress1" placeholder="Street address"></div>
+            <div class="form-group"><label>Address Line 2</label><input type="text" id="billingAddress2" placeholder="Apartment, suite, etc."></div>
+            <div class="form-group"><label>City</label><input type="text" id="billingCity" placeholder="City"></div>
+            <div class="form-group"><label>State</label>
+                <select id="billingState">
+                    <option value="">Select State</option>
+                </select>
+            </div>
+            <div class="form-group"><label>Postal Code</label><input type="text" id="billingZip" placeholder="PIN Code"></div>
+            <div class="form-group"><label>Country</label><input type="text" id="billingCountry" value="India" readonly></div>
+        </div>
+
+        <button class="btn" id="validateAddressContinueBtn" style="width:100%; margin-top:20px;">Continue to Payment</button>
+    </div>
+</div>
+
     <div class="payment-modal" id="paymentModal">
         <div class="payment-header">
             <h2>Payment Method</h2>
